@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "emi-ma-blockgame",
+	"version": "${version}",
+	"name": "Emi Ma BlockGame",
+	"description": "Recipe integration for BlockGame.",
+	"authors": [
+		"Zentropivity"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/TODO",
+		"sources": "https://github.com/TODO"
+	},
+	"license": "MIT",
+	"icon": "assets/emi-ma-blockgame/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"emi": [
+			"zentropivity.emimablockgame.EmiMaBlockGamePlugin"
+		]
+	},
+	"mixins": [],
+	"depends": {
+		"fabricloader": ">=0.15.9",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"recommends": {
+		"emi": "${emi_version}"
+	}
+}
