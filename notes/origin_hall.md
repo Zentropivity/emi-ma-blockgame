@@ -26,7 +26,7 @@ Miner Extra Guy in Origin hall
   - 5 Coins
 - Tome of Mining Secrets
   - 50 Coins
-  - Earthern Heart
+  - Earthen Heart
 - Fragile Pickaxe
   - 1000 Coins
   - Skysteel Pickaxe (T3)

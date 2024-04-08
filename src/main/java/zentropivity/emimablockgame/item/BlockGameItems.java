@@ -6,13 +6,68 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 
 import dev.emi.emi.api.EmiRegistry;
 import dev.emi.emi.api.stack.EmiStack;
+import net.minecraft.client.gui.DrawContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.StringNbtReader;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 
 import java.util.HashMap;
+import java.util.List;
+
+//TODO maybe using a custom stack can help stop vanilla recipes from interfering
+// public class BlockGameStack extends EmiStack {
+
+//   @Override
+//   public void render(DrawContext draw, int x, int y, float delta, int flags) {
+//     // TODO Auto-generated method stub
+//     throw new UnsupportedOperationException("Unimplemented method 'render'");
+//   }
+
+//   @Override
+//   public EmiStack copy() {
+//     // TODO Auto-generated method stub
+//     throw new UnsupportedOperationException("Unimplemented method 'copy'");
+//   }
+
+//   @Override
+//   public boolean isEmpty() {
+//     // TODO Auto-generated method stub
+//     throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+//   }
+
+//   @Override
+//   public NbtCompound getNbt() {
+//     // TODO Auto-generated method stub
+//     throw new UnsupportedOperationException("Unimplemented method 'getNbt'");
+//   }
+
+//   @Override
+//   public Object getKey() {
+//     // TODO Auto-generated method stub
+//     throw new UnsupportedOperationException("Unimplemented method 'getKey'");
+//   }
+
+//   @Override
+//   public Identifier getId() {
+//     // TODO Auto-generated method stub
+//     throw new UnsupportedOperationException("Unimplemented method 'getId'");
+//   }
+
+//   @Override
+//   public List<Text> getTooltipText() {
+//     // TODO Auto-generated method stub
+//     throw new UnsupportedOperationException("Unimplemented method 'getTooltipText'");
+//   }
+
+//   @Override
+//   public Text getName() {
+//     // TODO Auto-generated method stub
+//     throw new UnsupportedOperationException("Unimplemented method 'getName'");
+//   }}
 
 public class BlockGameItems {
   private static final Map<String, EmiStack> ITEMS = new HashMap<>();
@@ -21,7 +76,7 @@ public class BlockGameItems {
     ItemStack Stack = new ItemStack(item);
     // Stack.setCount(0);
 
-    //TODO use EMI translations api on display name here
+    // TODO use EMI translations api on display name here
 
     String nbt = "{ \"display\": {\"Name\": '{\"text\":\"" + name
         + "\",\"color\":\"white\",\"italic\":false}'}, \"MMOITEMS_ITEM_ID\": \"" + bgItem + "\" }";
@@ -34,7 +89,10 @@ public class BlockGameItems {
     }
     Stack.setNbt(NBT);
 
-    return ITEMS.put(bgItem, EmiStack.of(Stack));
+    EmiStack out = EmiStack.of(Stack);
+    ITEMS.put(bgItem, out);
+
+    return out;
   }
 
   // public static final EmiStack
@@ -1053,6 +1111,21 @@ public class BlockGameItems {
   public static void addItems(EmiRegistry registry) {
     ITEMS.forEach((k, v) -> {
       registry.addEmiStack(v);
+      // registry.setDefaultComparison((a, b) -> {
+      //   return a == b;
+      // });
     });
   }
+
+  //NOTE removing recipes containing our slightly customised items would remove vanilla recipes too
+  // public static void cleanRecipes(EmiRegistry registry) {
+  // registry.removeRecipes((rec) -> {
+  // for(String key : ITEMS.keySet()) {
+  // if (rec.getOutputs().contains(ITEMS.get(key))) {
+  // return true;
+  // }
+  // }
+  // return false;
+  // });
+  // }
 }

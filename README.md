@@ -4,13 +4,14 @@ This is an extension to [EMI](https://github.com/emilyploszaj/emi), the featuref
 
 ## Features
 
-Currently at 2024-04-08.
+_Checked with BlockGame on 2024-04-08._
 
 - [x] Items
 - [ ] Recipes
   - Origin Hall
-    - [ ] George
-- [ ] Translations
+    - [x] George
+- [ ] Translations?
+- [ ] Fix item names
 - [ ] Aliases for search
 
 ## Contributing and support
