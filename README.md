@@ -2,11 +2,16 @@
 
 This is an extension to [EMI](https://github.com/emilyploszaj/emi), the featureful and accessible item and recipe viewer for Minecraft. It shows [BlockGame](https://blockgame.info/) vendor recipes. That's all it's supposed to do.
 
-## TODO
+## Features
+
+Currently at 2024-04-08.
 
 - [x] Items
 - [ ] Recipes
+  - Origin Hall
+    - [ ] George
 - [ ] Translations
+- [ ] Aliases for search
 
 ## Contributing and support
 

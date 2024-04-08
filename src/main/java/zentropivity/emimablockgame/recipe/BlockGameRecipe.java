@@ -16,7 +16,7 @@ public class BlockGameRecipe implements EmiRecipe {
 
 	@Override
 	public EmiRecipeCategory getCategory() {
-		return EmiMaBlockGamePlugin.BLOCKGAME_RECIPES;
+		return EmiMaBlockGamePlugin.RECIPES_GEORGE;
 	}
 
 	@Override
@@ -49,6 +49,5 @@ public class BlockGameRecipe implements EmiRecipe {
 
 	@Override
 	public void addWidgets(WidgetHolder widgets) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'addWidgets'");
+		//TODO
 	}}

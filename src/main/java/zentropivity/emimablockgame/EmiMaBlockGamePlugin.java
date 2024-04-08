@@ -1,5 +1,8 @@
 package zentropivity.emimablockgame;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,24 +22,23 @@ public class EmiMaBlockGamePlugin implements EmiPlugin {
 	// That way, it's clear which mod wrote info, warnings, and errors.
   public static final Logger LOGGER = LoggerFactory.getLogger("emi-ma-blockgame");
 
-  public static final EmiRecipeCategory BLOCKGAME_RECIPES
-            = new EmiRecipeCategory(new Identifier("emimablockgame", "blockgame_recipes"), EmiStack.of(Items.AXOLOTL_BUCKET));
+	public static final Map<String, EmiRecipeCategory> ALL = new HashMap<String, EmiRecipeCategory>();
 
-  public static final EmiStack FOOD_RECIPES = EmiStack.of(Items.AXOLOTL_BUCKET);
-
-	public static final BlockGameItems ITEMS = new BlockGameItems();
+  public static final EmiRecipeCategory
+		RECIPES_GEORGE = new EmiRecipeCategory(new Identifier("emimablockgame", "george"), EmiStack.of(Items.STONE_PICKAXE));
 
   @Override
   public void register(EmiRegistry registry) {
     // Tell EMI to add a tab for your category
-    registry.addCategory(BLOCKGAME_RECIPES);
+    registry.addCategory(RECIPES_GEORGE);
 
     // Add all the workstations your category uses
 		//TODO recipes
-    registry.addWorkstation(BLOCKGAME_RECIPES, FOOD_RECIPES);
-		// registry.addRecipe(new BlockGameRecipe());
+    registry.addWorkstation(RECIPES_GEORGE, EmiStack.of(Items.STONE_PICKAXE));
 
-		ITEMS.addItems(registry);
+		// registry.addRecipe(new BlockGameRecipe(RECIPES_GEORGE));
+
+		BlockGameItems.addItems(registry);
 
 		LOGGER.info("Emi Ma BlockGame Plugin is ALIVE!");
   }

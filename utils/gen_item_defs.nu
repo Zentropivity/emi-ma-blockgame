@@ -20,18 +20,24 @@ let ll = $ll | flatten
 
 let ll = $ll | uniq-by bg_item | sort-by bg_item
 #NOTE 908 unique items
-# save this for diff
+# diff this every regeneration
 # echo $ll
 $ll | to tsv | save -f items_cache.tsv
 
 # generate java code
-let start = "  Map<String, EmiStack> map = new HashMap<String, EmiStack>();"
-let code = ($start ++ ($ll | par-each {|it| $"  map.put\(\"($it.bg_item)\", createItem\(Items.($it.mc_item), \"($it.bg_item)\", \"(
+let start = "  public static final EmiStack"
+let code = ($start ++ ($ll | par-each {|it| $"    ($it.bg_item) = createItem\(Items.($it.mc_item), \"($it.bg_item)\", \"(
   $it.bg_item | str downcase | split row "_" | each {$in | str capitalize} | str join ' '
-)\"\)\);"}) ++ "\n")
+)\"\),"}) ++ ";")
 
 $code | to text | save -f code_gen.java
 
 #NOTE generation may not be perfect
 #FIXME manually
 # - SEE_BREATHER is SEA_PICKLE (not PUFFERFISH)
+#
+# Some item ids cannot be keys, so fix:
+# - ROTTEN_MAW_COMPASS
+# - KROGNARS_BASTION_COMPASS
+# - SUNKEN_CELLS_COMPASS
+# - FILTER
