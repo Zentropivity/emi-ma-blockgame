@@ -5,69 +5,15 @@ import java.util.Map;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 
 import dev.emi.emi.api.EmiRegistry;
+import dev.emi.emi.api.stack.Comparison;
 import dev.emi.emi.api.stack.EmiStack;
-import net.minecraft.client.gui.DrawContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.StringNbtReader;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
 
 import java.util.HashMap;
-import java.util.List;
-
-//TODO maybe using a custom stack can help stop vanilla recipes from interfering
-// public class BlockGameStack extends EmiStack {
-
-//   @Override
-//   public void render(DrawContext draw, int x, int y, float delta, int flags) {
-//     // TODO Auto-generated method stub
-//     throw new UnsupportedOperationException("Unimplemented method 'render'");
-//   }
-
-//   @Override
-//   public EmiStack copy() {
-//     // TODO Auto-generated method stub
-//     throw new UnsupportedOperationException("Unimplemented method 'copy'");
-//   }
-
-//   @Override
-//   public boolean isEmpty() {
-//     // TODO Auto-generated method stub
-//     throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
-//   }
-
-//   @Override
-//   public NbtCompound getNbt() {
-//     // TODO Auto-generated method stub
-//     throw new UnsupportedOperationException("Unimplemented method 'getNbt'");
-//   }
-
-//   @Override
-//   public Object getKey() {
-//     // TODO Auto-generated method stub
-//     throw new UnsupportedOperationException("Unimplemented method 'getKey'");
-//   }
-
-//   @Override
-//   public Identifier getId() {
-//     // TODO Auto-generated method stub
-//     throw new UnsupportedOperationException("Unimplemented method 'getId'");
-//   }
-
-//   @Override
-//   public List<Text> getTooltipText() {
-//     // TODO Auto-generated method stub
-//     throw new UnsupportedOperationException("Unimplemented method 'getTooltipText'");
-//   }
-
-//   @Override
-//   public Text getName() {
-//     // TODO Auto-generated method stub
-//     throw new UnsupportedOperationException("Unimplemented method 'getName'");
-//   }}
 
 public class BlockGameItems {
   private static final Map<String, EmiStack> ITEMS = new HashMap<>();
@@ -75,8 +21,6 @@ public class BlockGameItems {
   public static EmiStack createItem(Item item, String bgItem, String name) {
     ItemStack Stack = new ItemStack(item);
     // Stack.setCount(0);
-
-    // TODO use EMI translations api on display name here
 
     String nbt = "{ \"display\": {\"Name\": '{\"text\":\"" + name
         + "\",\"color\":\"white\",\"italic\":false}'}, \"MMOITEMS_ITEM_ID\": \"" + bgItem + "\" }";
@@ -89,16 +33,13 @@ public class BlockGameItems {
     }
     Stack.setNbt(NBT);
 
-    EmiStack out = EmiStack.of(Stack);
+    EmiStack out = EmiStack.of(Stack).comparison(Comparison.compareNbt());
     ITEMS.put(bgItem, out);
 
     return out;
   }
 
-  // public static final EmiStack
-  // WHIPPING_WIND = createItem(Items.BONE_MEAL, "WHIPPING_WIND", "Whipping
-  // Wind"),
-  // WHOLE_WART = createItem(Items.RED_DYE, "WHOLE_WART", "Whole Wart"));
+  // mostly generated
   public static final EmiStack ACOLYTE_BOOTS = createItem(Items.LEATHER_BOOTS, "ACOLYTE_BOOTS", "Acolyte Boots"),
       ACOLYTE_CHESTPLATE = createItem(Items.LEATHER_CHESTPLATE, "ACOLYTE_CHESTPLATE", "Acolyte Chestplate"),
       ACOLYTE_HELMET = createItem(Items.LEATHER_HELMET, "ACOLYTE_HELMET", "Acolyte Helmet"),
@@ -312,12 +253,12 @@ public class BlockGameItems {
       EARTHEN_HEART = createItem(Items.TURTLE_EGG, "EARTHEN_HEART", "Earthen Heart"),
       EASTER_LAMB = createItem(Items.COOKED_MUTTON, "EASTER_LAMB", "Easter Lamb"),
       EGGNOG = createItem(Items.POTION, "EGGNOG", "Eggnog"),
-      ESSENCE_CORRUPTED = createItem(Items.BLACK_DYE, "ESSENCE_CORRUPTED", "Essence Corrupted"),
-      ESSENCE_EARTH = createItem(Items.BROWN_DYE, "ESSENCE_EARTH", "Essence Earth"),
-      ESSENCE_FIRE = createItem(Items.RED_DYE, "ESSENCE_FIRE", "Essence Fire"),
-      ESSENCE_LIFE = createItem(Items.GHAST_TEAR, "ESSENCE_LIFE", "Essence Life"),
-      ESSENCE_WATER = createItem(Items.BLUE_DYE, "ESSENCE_WATER", "Essence Water"),
-      ESSENCE_WIND = createItem(Items.LIGHT_GRAY_DYE, "ESSENCE_WIND", "Essence Wind"),
+      ESSENCE_CORRUPTED = createItem(Items.BLACK_DYE, "ESSENCE_CORRUPTED", "Corrupted Essence"),
+      ESSENCE_ROCKY = createItem(Items.BROWN_DYE, "ESSENCE_EARTH", "Rocky Essence"),
+      ESSENCE_FIERY = createItem(Items.RED_DYE, "ESSENCE_FIRE", "Fiery Essence"),
+      ESSENCE_VIBRANT = createItem(Items.GHAST_TEAR, "ESSENCE_LIFE", "Vibrant Essence"),
+      ESSENCE_DAMP = createItem(Items.BLUE_DYE, "ESSENCE_WATER", "Damp Essence"),
+      ESSENCE_FLEETING = createItem(Items.LIGHT_GRAY_DYE, "ESSENCE_WIND", "Fleeting Essence"),
       FANCY_SHELL = createItem(Items.NAUTILUS_SHELL, "FANCY_SHELL", "Fancy Shell"),
       FAT_CARROT = createItem(Items.CARROT, "FAT_CARROT", "Fat Carrot"),
       FINNY_BONE = createItem(Items.PRISMARINE_CRYSTALS, "FINNY_BONE", "Finny Bone"),
@@ -894,6 +835,10 @@ public class BlockGameItems {
       STARTER_LUMBERJACK_OAK = createItem(Items.OAK_LOG, "STARTER_LUMBERJACK_OAK", "Starter Lumberjack Oak"),
       STARTER_LUMBERJACK_SPRUCE = createItem(Items.SPRUCE_LOG, "STARTER_LUMBERJACK_SPRUCE",
           "Starter Lumberjack Spruce"),
+      STARTER_LUMBERJACK_MANGROVE = createItem(Items.MANGROVE_LOG, "STARTER_LUMBERJACK_MANGROVE",
+          "Starter Lumberjack Mangrove"),
+      STARTER_LUMBERJACK_CHERRY = createItem(Items.CHERRY_LOG, "STARTER_LUMBERJACK_CHERRY",
+          "Starter Lumberjack Cherry"),
       STARTER_MINER_COPPER = createItem(Items.CHARCOAL, "STARTER_MINER_COPPER", "Starter Miner Copper"),
       STARTER_MINER_EARTH = createItem(Items.CHARCOAL, "STARTER_MINER_EARTH", "Starter Miner Earth"),
       STARTER_MINER_GEODE = createItem(Items.CHARCOAL, "STARTER_MINER_GEODE", "Starter Miner Geode"),
@@ -1108,16 +1053,27 @@ public class BlockGameItems {
       WOOL_LEGGINGS = createItem(Items.LEATHER_LEGGINGS, "WOOL_LEGGINGS", "Wool Leggings"),
       ZOMBIE_LEATHER = createItem(Items.LEATHER, "ZOMBIE_LEATHER", "Zombie Leather");
 
+  // fully manually added
+  public static final EmiStack BARK_OAK = createItem(Items.OAK_PRESSURE_PLATE, "BARK_OAK", "Oak Bark"),
+      BARK_SPRUCE = createItem(Items.SPRUCE_PRESSURE_PLATE, "BARK_SPRUCE", "Spruce Bark"),
+      BARK_BIRCH = createItem(Items.BIRCH_PRESSURE_PLATE, "BARK_BIRCH", "Birch Bark"),
+      BARK_MANGROVE = createItem(Items.MANGROVE_PRESSURE_PLATE, "BARK_MANGROVE", "Mangrove Bark"),
+      BARK_JUNGLE = createItem(Items.JUNGLE_PRESSURE_PLATE, "BARK_JUNGLE", "Jungle Bark"),
+      BARK_ACACIA = createItem(Items.ACACIA_PRESSURE_PLATE, "BARK_ACACIA", "Acacia Bark"),
+      BARK_DARK_OAK = createItem(Items.DARK_OAK_PRESSURE_PLATE, "BARK_DARK_OAK", "Dark Oak Bark");
+
   public static void addItems(EmiRegistry registry) {
     ITEMS.forEach((k, v) -> {
       registry.addEmiStack(v);
+      // TODO? what is this function? can we use it to stop vanilla items interfering?
       // registry.setDefaultComparison((a, b) -> {
-      //   return a == b;
+      // return a == b;
       // });
     });
   }
 
-  //NOTE removing recipes containing our slightly customised items would remove vanilla recipes too
+  // NOTE removing recipes containing our slightly customised items would remove
+  // vanilla recipes too
   // public static void cleanRecipes(EmiRegistry registry) {
   // registry.removeRecipes((rec) -> {
   // for(String key : ITEMS.keySet()) {

@@ -7,7 +7,10 @@ import org.slf4j.LoggerFactory;
 
 import zentropivity.emimablockgame.item.BlockGameItems;
 import zentropivity.emimablockgame.vendors.AbstractVendor;
+import zentropivity.emimablockgame.vendors.Baelin;
 import zentropivity.emimablockgame.vendors.George;
+import zentropivity.emimablockgame.vendors.Mortimer;
+import zentropivity.emimablockgame.vendors.Paul;
 import dev.emi.emi.api.EmiPlugin;
 import dev.emi.emi.api.EmiRegistry;
 
@@ -17,7 +20,12 @@ public class EmiMaBlockGamePlugin implements EmiPlugin {
   // That way, it's clear which mod wrote info, warnings, and errors.
   public static final Logger LOGGER = LoggerFactory.getLogger("emi-ma-blockgame");
 
-  public final List<AbstractVendor> ALLVENDORS = List.of(new George());
+  public final List<AbstractVendor> ALLVENDORS = List.of(
+    new George(),
+    new Paul(),
+    new Mortimer(),
+    new Baelin()
+  );
 
   @Override
   public void register(EmiRegistry registry) {

@@ -2,49 +2,46 @@ package zentropivity.emimablockgame.vendors;
 
 import java.util.List;
 
-import dev.emi.emi.api.stack.EmiIngredient;
-import net.minecraft.item.ItemStack;
+import dev.emi.emi.api.stack.EmiStack;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.Ingredient;
 import zentropivity.emimablockgame.item.BlockGameItems;
-import zentropivity.emimablockgame.recipe.BlockGameRecipe;
 
 public class George extends AbstractVendor {
   public George() {
     super("george", BlockGameItems.BRASS_PICKAXE);
 
-    singleOutputRecipes("repair/normal/common", 0, 5, List.of(
-      List.of(EmiIngredient.of(Ingredient.ofStacks(new ItemStack(Items.ANDESITE).copyWithCount(64)))),
-      List.of(EmiIngredient.of(Ingredient.ofStacks(new ItemStack(Items.SMOOTH_BASALT).copyWithCount(64)))),
-      List.of(EmiIngredient.of(Ingredient.ofStacks(new ItemStack(Items.CALCITE).copyWithCount(64)))),
-      List.of(EmiIngredient.of(Ingredient.ofStacks(new ItemStack(Items.DRIPSTONE_BLOCK).copyWithCount(64)))),
-      List.of(EmiIngredient.of(Ingredient.ofStacks(new ItemStack(Items.DIORITE).copyWithCount(64)))),
-      List.of(EmiIngredient.of(Ingredient.ofStacks(new ItemStack(Items.COBBLED_DEEPSLATE).copyWithCount(64)))),
-      List.of(EmiIngredient.of(Ingredient.ofStacks(new ItemStack(Items.TUFF).copyWithCount(64)))),
-      List.of(EmiIngredient.of(Ingredient.ofStacks(new ItemStack(Items.GRANITE).copyWithCount(64)))),
-      List.of(EmiIngredient.of(Ingredient.ofStacks(BlockGameItems.PRISTINE_STONE.getItemStack().copyWithCount(16)))),
-      List.of(EmiIngredient.of(Ingredient.ofStacks(new ItemStack(Items.SMOOTH_BASALT).copyWithCount(8))))
-    ), List.of(BlockGameItems.REPAIR_POWDER_COMMON));
+    sameOutRecipes("repair/normal/common", 0, 5, List.of(
+        EmiStack.of(Items.ANDESITE, 64),
+        EmiStack.of(Items.SMOOTH_BASALT, 64),
+        EmiStack.of(Items.CALCITE, 64),
+        EmiStack.of(Items.DRIPSTONE_BLOCK, 64),
+        EmiStack.of(Items.DIORITE, 64),
+        EmiStack.of(Items.COBBLED_DEEPSLATE, 64),
+        EmiStack.of(Items.TUFF, 64),
+        EmiStack.of(Items.GRANITE, 64),
+        EmiStack.of(Items.GRANITE, 64),
+        BlockGameItems.PRISTINE_STONE.copy().setAmount(16),
+        EmiStack.of(Items.SMOOTH_BASALT).setAmount(8)),
+        BlockGameItems.REPAIR_POWDER_COMMON);
 
-    singleOutputRecipes("repair/arcane/common", 0, 5, List.of(
-      List.of(EmiIngredient.of(Ingredient.ofStacks(new ItemStack(Items.LAPIS_LAZULI).copyWithCount(8)))),
-      List.of(EmiIngredient.of(Ingredient.ofStacks(new ItemStack(Items.AMETHYST_SHARD).copyWithCount(8))))
-    ), List.of(BlockGameItems.REPAIR_POWDER_ARCANE_COMMON));
+    sameOutRecipes("repair/arcane/common", 0, 5, List.of(
+        EmiStack.of(Items.LAPIS_LAZULI).setAmount(8),
+        EmiStack.of(Items.AMETHYST_SHARD).setAmount(8)),
+        BlockGameItems.REPAIR_POWDER_ARCANE_COMMON);
 
-    recipes.add(new BlockGameRecipe(category, "repair/arcane/uncommon/0", 10,
+    recipe("repair/arcane/uncommon", 10,
+        Items.AMETHYST_BLOCK.getDefaultStack(),
+        BlockGameItems.REPAIR_POWDER_ARCANE_UNCOMMON);
+
+    recipe("xptome/mining", 50,
+        BlockGameItems.EARTHEN_HEART,
+        BlockGameItems.SECRETS_MINING);
+
+    recipe("fragile/pickaxe", 1000,
         List.of(
-            EmiIngredient.of(Ingredient.ofStacks(new ItemStack(Items.AMETHYST_BLOCK).copyWithCount(16)))),
-        List.of(BlockGameItems.REPAIR_POWDER_ARCANE_UNCOMMON)));
-    recipes.add(new BlockGameRecipe(category, "mining/xptome", 50,
-        List.of(
-            EmiIngredient.of(Ingredient.ofStacks(BlockGameItems.EARTHEN_HEART.getItemStack().copy()))),
-        List.of(BlockGameItems.SECRETS_MINING)));
-    recipes.add(new BlockGameRecipe(category, "fragile/pickaxe", 1000,
-        List.of(
-            EmiIngredient.of(Ingredient.ofStacks(BlockGameItems.SKYSTEEL_PICKAXE.getItemStack().copy())),
-            EmiIngredient.of(Ingredient.ofStacks(BlockGameItems.BOLT_SILK.getItemStack().copyWithCount(9))),
-            EmiIngredient.of(Ingredient.ofStacks(BlockGameItems.PRISTINE_WOOD.getItemStack().copyWithCount(2)))
-        ),
-        List.of(BlockGameItems.FRAGILE_PICKAXE)));
+            BlockGameItems.SKYSTEEL_PICKAXE,
+            BlockGameItems.BOLT_SILK.copy().setAmount(9),
+            BlockGameItems.PRISTINE_WOOD.copy().setAmount(2)),
+        BlockGameItems.FRAGILE_PICKAXE);
   }
 }

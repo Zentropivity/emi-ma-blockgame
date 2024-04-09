@@ -20,11 +20,15 @@ public class BlockGameRecipe implements EmiRecipe {
   private final List<EmiIngredient> input;
   private final List<EmiStack> output;
 
-  public BlockGameRecipe(EmiRecipeCategory category, String id, int gold, List<EmiIngredient> input, List<EmiStack> output) {
+  public BlockGameRecipe(EmiRecipeCategory category, String id, int gold, List<EmiIngredient> input,
+      List<EmiStack> output) {
     this.category = category;
     this.id = new Identifier("emimablockgame", id);
     this.input = new LinkedList<EmiIngredient>(input);
-    this.input.add(EmiIngredient.of(Ingredient.ofStacks(BlockGameItems.GOLD_COIN.getItemStack().copyWithCount(gold))));
+    if (gold > 0) {
+      this.input
+          .add(EmiIngredient.of(Ingredient.ofStacks(BlockGameItems.GOLD_COIN.getItemStack().copyWithCount(gold))));
+    }
     this.output = output;
   }
 
@@ -77,7 +81,7 @@ public class BlockGameRecipe implements EmiRecipe {
       size = 26;
       widgets.addSlot(output.get(0), 134 - border - size, border).large(true);
     } else {
-      //NOTE this fails at > 3 outputs
+      // NOTE this fails at > 3 outputs
       for (int i = 0; i < output.size(); i++) {
         widgets.addSlot(output.get(i), 134 - border - size, border + (size + gap) * i);
       }
