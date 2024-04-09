@@ -31,10 +31,6 @@ public class EmiMaBlockGamePlugin implements EmiPlugin {
   public void register(EmiRegistry registry) {
     BlockGameItems.addItems(registry);
 
-    // NOTE removing recipes containing our slightly customised items would remove
-    // vanilla recipes too
-    // BlockGameItems.cleanRecipes(registry);
-
     ALLVENDORS.forEach((v) -> v.init(registry));
 
     LOGGER.info("Emi Ma BlockGame Plugin is ALIVE!");

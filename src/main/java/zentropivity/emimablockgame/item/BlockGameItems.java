@@ -108,6 +108,13 @@ public class BlockGameItems {
       AUGMENT_MINING_5 = createItem(Items.CHAIN, "AUGMENT_MINING_5", "Augment Mining 5"),
       BACON_AND_EGGS = createItem(Items.RABBIT_STEW, "BACON_AND_EGGS", "Bacon And Eggs"),
       BACON_BITS = createItem(Items.COCOA_BEANS, "BACON_BITS", "Bacon Bits"),
+      BARK_OAK = createItem(Items.OAK_PRESSURE_PLATE, "BARK_OAK", "Oak Bark"),
+      BARK_SPRUCE = createItem(Items.SPRUCE_PRESSURE_PLATE, "BARK_SPRUCE", "Spruce Bark"),
+      BARK_BIRCH = createItem(Items.BIRCH_PRESSURE_PLATE, "BARK_BIRCH", "Birch Bark"),
+      BARK_MANGROVE = createItem(Items.MANGROVE_PRESSURE_PLATE, "BARK_MANGROVE", "Mangrove Bark"),
+      BARK_JUNGLE = createItem(Items.JUNGLE_PRESSURE_PLATE, "BARK_JUNGLE", "Jungle Bark"),
+      BARK_ACACIA = createItem(Items.ACACIA_PRESSURE_PLATE, "BARK_ACACIA", "Acacia Bark"),
+      BARK_DARK_OAK = createItem(Items.DARK_OAK_PRESSURE_PLATE, "BARK_DARK_OAK", "Dark Oak Bark"),
       BLESSED_WOOL_BOOTS = createItem(Items.LEATHER_BOOTS, "BLESSED_WOOL_BOOTS", "Blessed Wool Boots"),
       BLESSED_WOOL_CHESTPLATE = createItem(Items.LEATHER_CHESTPLATE, "BLESSED_WOOL_CHESTPLATE",
           "Blessed Wool Chestplate"),
@@ -828,17 +835,17 @@ public class BlockGameItems {
       STARTER_LUMBERJACK_ACACIA = createItem(Items.ACACIA_LOG, "STARTER_LUMBERJACK_ACACIA",
           "Starter Lumberjack Acacia"),
       STARTER_LUMBERJACK_BIRCH = createItem(Items.BIRCH_LOG, "STARTER_LUMBERJACK_BIRCH", "Starter Lumberjack Birch"),
+      STARTER_LUMBERJACK_CHERRY = createItem(Items.CHERRY_LOG, "STARTER_LUMBERJACK_CHERRY",
+          "Starter Lumberjack Cherry"),
       STARTER_LUMBERJACK_DARKOAK = createItem(Items.DARK_OAK_LOG, "STARTER_LUMBERJACK_DARKOAK",
           "Starter Lumberjack Darkoak"),
       STARTER_LUMBERJACK_JUNGLE = createItem(Items.JUNGLE_LOG, "STARTER_LUMBERJACK_JUNGLE",
           "Starter Lumberjack Jungle"),
+      STARTER_LUMBERJACK_MANGROVE = createItem(Items.MANGROVE_LOG, "STARTER_LUMBERJACK_MANGROVE",
+          "Starter Lumberjack Mangrove"),
       STARTER_LUMBERJACK_OAK = createItem(Items.OAK_LOG, "STARTER_LUMBERJACK_OAK", "Starter Lumberjack Oak"),
       STARTER_LUMBERJACK_SPRUCE = createItem(Items.SPRUCE_LOG, "STARTER_LUMBERJACK_SPRUCE",
           "Starter Lumberjack Spruce"),
-      STARTER_LUMBERJACK_MANGROVE = createItem(Items.MANGROVE_LOG, "STARTER_LUMBERJACK_MANGROVE",
-          "Starter Lumberjack Mangrove"),
-      STARTER_LUMBERJACK_CHERRY = createItem(Items.CHERRY_LOG, "STARTER_LUMBERJACK_CHERRY",
-          "Starter Lumberjack Cherry"),
       STARTER_MINER_COPPER = createItem(Items.CHARCOAL, "STARTER_MINER_COPPER", "Starter Miner Copper"),
       STARTER_MINER_EARTH = createItem(Items.CHARCOAL, "STARTER_MINER_EARTH", "Starter Miner Earth"),
       STARTER_MINER_GEODE = createItem(Items.CHARCOAL, "STARTER_MINER_GEODE", "Starter Miner Geode"),
@@ -1053,35 +1060,9 @@ public class BlockGameItems {
       WOOL_LEGGINGS = createItem(Items.LEATHER_LEGGINGS, "WOOL_LEGGINGS", "Wool Leggings"),
       ZOMBIE_LEATHER = createItem(Items.LEATHER, "ZOMBIE_LEATHER", "Zombie Leather");
 
-  // fully manually added
-  public static final EmiStack BARK_OAK = createItem(Items.OAK_PRESSURE_PLATE, "BARK_OAK", "Oak Bark"),
-      BARK_SPRUCE = createItem(Items.SPRUCE_PRESSURE_PLATE, "BARK_SPRUCE", "Spruce Bark"),
-      BARK_BIRCH = createItem(Items.BIRCH_PRESSURE_PLATE, "BARK_BIRCH", "Birch Bark"),
-      BARK_MANGROVE = createItem(Items.MANGROVE_PRESSURE_PLATE, "BARK_MANGROVE", "Mangrove Bark"),
-      BARK_JUNGLE = createItem(Items.JUNGLE_PRESSURE_PLATE, "BARK_JUNGLE", "Jungle Bark"),
-      BARK_ACACIA = createItem(Items.ACACIA_PRESSURE_PLATE, "BARK_ACACIA", "Acacia Bark"),
-      BARK_DARK_OAK = createItem(Items.DARK_OAK_PRESSURE_PLATE, "BARK_DARK_OAK", "Dark Oak Bark");
-
   public static void addItems(EmiRegistry registry) {
     ITEMS.forEach((k, v) -> {
       registry.addEmiStack(v);
-      // TODO? what is this function? can we use it to stop vanilla items interfering?
-      // registry.setDefaultComparison((a, b) -> {
-      // return a == b;
-      // });
     });
   }
-
-  // NOTE removing recipes containing our slightly customised items would remove
-  // vanilla recipes too
-  // public static void cleanRecipes(EmiRegistry registry) {
-  // registry.removeRecipes((rec) -> {
-  // for(String key : ITEMS.keySet()) {
-  // if (rec.getOutputs().contains(ITEMS.get(key))) {
-  // return true;
-  // }
-  // }
-  // return false;
-  // });
-  // }
 }
