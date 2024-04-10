@@ -8,26 +8,34 @@ This is not associated in any official way with [BlockGame](https://blockgame.in
 
 ## Features
 
-_Checked on 2024-04-09._
+_Checked on 2024-04-10._
 
 - [x] Items
 - [ ] Recipes
-  - [ ] Bank
   - Origin Hall
     - [x] George
     - [x] Paul
     - [x] Mortimer
     - [x] Baelin
-    - [ ] Mint
-    - [ ] Stonebeard
-    - [ ] Souie Casa
-    - [ ] Baron Warbucks
-    - [ ] Mayor McCheese
+    - [x] Mint
+    - [x] Stonebeard
+    - [x] Souie Casa
+    - [x] Baron Warbucks
+    - [x] Mayor McCheese
   - Origin Professionals
     - [ ] Miner
     - [ ] Herbologist
     - [ ] Woodcutter
-- [ ] Translations?
+  - Crafting People
+    - ...
+  - Repair Robots
+    - ...
+  - Battle Class Crafters
+    - [ ] Wizard
+    - [ ] Thamaturge
+    - ...
+  - Food Crafters
+    - ...
 - [ ] Fix item names
 - [ ] Aliases for search
 

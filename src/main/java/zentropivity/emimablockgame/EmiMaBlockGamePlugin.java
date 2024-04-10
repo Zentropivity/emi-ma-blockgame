@@ -8,9 +8,14 @@ import org.slf4j.LoggerFactory;
 import zentropivity.emimablockgame.item.BlockGameItems;
 import zentropivity.emimablockgame.vendors.AbstractVendor;
 import zentropivity.emimablockgame.vendors.Baelin;
+import zentropivity.emimablockgame.vendors.BaronWarbucks;
 import zentropivity.emimablockgame.vendors.George;
+import zentropivity.emimablockgame.vendors.MayorMcCheese;
+import zentropivity.emimablockgame.vendors.Mint;
 import zentropivity.emimablockgame.vendors.Mortimer;
 import zentropivity.emimablockgame.vendors.Paul;
+import zentropivity.emimablockgame.vendors.SouieCasa;
+import zentropivity.emimablockgame.vendors.Stonebeard;
 import dev.emi.emi.api.EmiPlugin;
 import dev.emi.emi.api.EmiRegistry;
 
@@ -24,7 +29,12 @@ public class EmiMaBlockGamePlugin implements EmiPlugin {
     new George(),
     new Paul(),
     new Mortimer(),
-    new Baelin()
+    new Baelin(),
+    new Mint(),
+    new Stonebeard(),
+    new SouieCasa(),
+    new BaronWarbucks(),
+    new MayorMcCheese()
   );
 
   @Override

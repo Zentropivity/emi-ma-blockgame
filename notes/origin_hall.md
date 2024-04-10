@@ -310,3 +310,39 @@ He is secrectly a dragon, sleeps on a pile of gold.
 - Murder Rank 5
   - 1000 Coins
   - 60 War Supplies
+
+## Mayor McCheese
+
+All of them only require 1 Origin Daily Quest Token
+
+- Wet Grocery List - Raw Cod (STARTER_FISHERMAN_COD)
+- Damp Grocery List - Raw Salmon
+- Soaked Grocery List - Tropical Fish
+- Moist Grocery List - Raw Pufferfish
+- Cracked Geode - Copper Ingots (STARTER_MINER_COPPER)
+- Chalky Geode - Amethyst Blocks
+- Chunky Geode - Iron Ingots
+- Crunchy Geode - Lapis Lazuli
+- Combustible Geode - Redstone
+- Scored Tablet - Salt (STARTER_ARCHAEOLOGIST_SALT)
+- Inscribed Tablet - Chiseled Sandstone
+- Engraved Tablet - Common Shells
+- Carved Tablet - Pretty Shells
+- Etched Tablet - Fancy Shells
+- Crumpled Leaf - Wheat (STARTER_BOTANIST_WHEAT)
+- Ruffled Leaf - Beetroots
+- Crunchy Leaf - Carrots
+- Crumbly Leaf - Potatoes
+- Folded Leaf - Pepper
+- Carved Stump - Oak (STARTER_LUMBERJACK_OAK)
+- Cut Stump - Spruce
+- Sliced Stump - Birch
+- Crushed Stump - Jungle
+- Smashed Stump - Acacia
+- Destroyed Stump - Dark Oak
+- Waterlogged Stump - Mangrove
+- Colorful Stump - Cherry
+- Inscribed Chunk - Violence (STARTER_RUNECARVER_VIOLENCE)
+- Chiseled Chunk - Serenity
+- Carved Chunk - Clarity
+- Chipped Chunk - Muddled
