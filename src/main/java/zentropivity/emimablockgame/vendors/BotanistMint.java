@@ -4,9 +4,9 @@ import java.util.List;
 
 import zentropivity.emimablockgame.item.BlockGameItems;
 
-public class Mint extends AbstractVendor {
-  public Mint() {
-    super("mint", BlockGameItems.BRASS_HOE);
+public class BotanistMint extends AbstractVendor {
+  public BotanistMint() {
+    super("botanistmint", BlockGameItems.BRASS_HOE);
 
     sameOutRecipes("repair/normal/uncommon", 0, 10, List.of(
         BlockGameItems.GOLDEN_WHEAT.copy().setAmount(8),

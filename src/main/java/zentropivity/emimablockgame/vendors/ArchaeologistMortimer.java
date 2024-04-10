@@ -6,9 +6,9 @@ import dev.emi.emi.api.stack.EmiStack;
 import net.minecraft.item.Items;
 import zentropivity.emimablockgame.item.BlockGameItems;
 
-public class Mortimer extends AbstractVendor {
-  public Mortimer() {
-    super("mortimer", BlockGameItems.BRASS_SHOVEL);
+public class ArchaeologistMortimer extends AbstractVendor {
+  public ArchaeologistMortimer() {
+    super("archaeologistmortimer", BlockGameItems.BRASS_SHOVEL);
 
     sameOutRecipes("repair/normal/common", 0, 5, List.of(
         EmiStack.of(Items.DIRT, 64),

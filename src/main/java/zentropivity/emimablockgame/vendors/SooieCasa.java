@@ -4,9 +4,9 @@ import java.util.List;
 
 import zentropivity.emimablockgame.item.BlockGameItems;
 
-public class SouieCasa extends AbstractVendor {
-  public SouieCasa() {
-    super("souiecasa", BlockGameItems.WRIT_EXPANSION);
+public class SooieCasa extends AbstractVendor {
+  public SooieCasa() {
+    super("sooiecasa", BlockGameItems.WRIT_EXPANSION);
 
     recipe("expansion/corrupted", 500, BlockGameItems.CORRUPTED_SHARD.copy().setAmount(5),
         BlockGameItems.WRIT_EXPANSION);

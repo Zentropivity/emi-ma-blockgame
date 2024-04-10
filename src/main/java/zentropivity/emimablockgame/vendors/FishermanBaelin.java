@@ -6,9 +6,9 @@ import dev.emi.emi.api.stack.EmiStack;
 import net.minecraft.item.Items;
 import zentropivity.emimablockgame.item.BlockGameItems;
 
-public class Baelin extends AbstractVendor {
-  public Baelin() {
-    super("baelin", BlockGameItems.BRASS_FISHINGPOLE);
+public class FishermanBaelin extends AbstractVendor {
+  public FishermanBaelin() {
+    super("fishermanbaelin", BlockGameItems.BRASS_FISHINGPOLE);
 
     sameOutRecipes("repair/normal/common", 0, 5, List.of(
         EmiStack.of(Items.COD, 64),

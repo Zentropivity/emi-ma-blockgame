@@ -6,9 +6,9 @@ import dev.emi.emi.api.stack.EmiStack;
 import net.minecraft.item.Items;
 import zentropivity.emimablockgame.item.BlockGameItems;
 
-public class George extends AbstractVendor {
-  public George() {
-    super("george", BlockGameItems.BRASS_PICKAXE);
+public class MinerGeorge extends AbstractVendor {
+  public MinerGeorge() {
+    super("minergeorge", BlockGameItems.BRASS_PICKAXE);
 
     sameOutRecipes("repair/normal/common", 0, 5, List.of(
         EmiStack.of(Items.ANDESITE, 64),

@@ -6,9 +6,9 @@ import dev.emi.emi.api.stack.EmiStack;
 import net.minecraft.item.Items;
 import zentropivity.emimablockgame.item.BlockGameItems;
 
-public class Paul extends AbstractVendor {
-  public Paul() {
-    super("paul", BlockGameItems.BRASS_AXE);
+public class LumberjackPaul extends AbstractVendor {
+  public LumberjackPaul() {
+    super("lumberjackpaul", BlockGameItems.BRASS_AXE);
 
     sameOutRecipes("repair/normal/common", 0, 5, List.of(
         EmiStack.of(Items.OAK_LOG, 64),

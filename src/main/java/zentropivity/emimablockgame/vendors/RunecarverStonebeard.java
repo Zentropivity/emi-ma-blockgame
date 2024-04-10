@@ -6,9 +6,9 @@ import dev.emi.emi.api.stack.EmiStack;
 import net.minecraft.item.Items;
 import zentropivity.emimablockgame.item.BlockGameItems;
 
-public class Stonebeard extends AbstractVendor {
-  public Stonebeard() {
-    super("stonebeard", BlockGameItems.RUNE_ERASER);
+public class RunecarverStonebeard extends AbstractVendor {
+  public RunecarverStonebeard() {
+    super("runecarverstonebeard", BlockGameItems.RUNE_ERASER);
 
     // runes
     recipe("rune/serenity/1", 100, List.of(
