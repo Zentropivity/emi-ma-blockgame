@@ -40,8 +40,10 @@ _Checked on 2024-04-11._
     - [x] Robot Forge
     - [x] Golem Metal
   - Food Crafting People
-    - [ ] Chef Ken
-    - [ ] Chef Sue
+    - [x] Chef Ken
+      - [ ] Add recipes I don't have
+    - [x] Chef Sue
+      - [ ] Add recipes I don't have
     - [ ] Tea Master Piggly Wiggly
   - Battle Class Crafting People
     - [ ] Leatherworker Seymour
