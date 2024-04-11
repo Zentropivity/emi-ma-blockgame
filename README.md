@@ -44,7 +44,7 @@ _Checked on 2024-04-11._
       - [ ] Add recipes I don't have
     - [x] Chef Sue
       - [ ] Add recipes I don't have
-    - [ ] Tea Master Piggly Wiggly
+    - [x] Tea Master Piggly Wiggly
   - Battle Class Crafting People
     - [ ] Leatherworker Seymour
     - [ ] Bowyer Brent
