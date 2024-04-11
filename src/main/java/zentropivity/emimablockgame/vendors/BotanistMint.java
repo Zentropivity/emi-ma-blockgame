@@ -12,15 +12,12 @@ public class BotanistMint extends AbstractVendor {
         BlockGameItems.GOLDEN_WHEAT.copy().setAmount(8),
         BlockGameItems.GOLDEN_POTATO.copy().setAmount(8),
         BlockGameItems.FAT_CARROT.copy().setAmount(8)),
-        BlockGameItems.REPAIR_POWDER_COMMON);
+        BlockGameItems.REPAIR_POWDER_UNCOMMON);
 
-    sameOutRecipes("repair/normal/uncommon", 0, 50, List.of(
+    sameOutRecipes("repair/normal/rare", 0, 50, List.of(
         BlockGameItems.SENTIENT_WHEAT.copy().setAmount(4),
         BlockGameItems.SENTIENT_POTATO.copy().setAmount(4)),
-        BlockGameItems.REPAIR_POWDER_COMMON);
-
-    recipe("repair/arcane/rare", 50, BlockGameItems.COAGULATED_MASS.copy().setAmount(4),
-        BlockGameItems.REPAIR_POWDER_ARCANE_RARE);
+        BlockGameItems.REPAIR_POWDER_RARE);
 
     recipe("xptome/herbalism", 50, BlockGameItems.EARTHEN_HEART, BlockGameItems.SECRETS_HERBALISM);
     recipe("fragile/hoe", 1000, List.of(

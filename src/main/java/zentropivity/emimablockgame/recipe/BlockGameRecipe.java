@@ -10,7 +10,6 @@ import dev.emi.emi.api.recipe.EmiRecipeCategory;
 import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
 import dev.emi.emi.api.widget.WidgetHolder;
-import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Identifier;
 import zentropivity.emimablockgame.item.BlockGameItems;
 
@@ -26,8 +25,7 @@ public class BlockGameRecipe implements EmiRecipe {
     this.id = new Identifier("emimablockgame", id);
     this.input = new LinkedList<EmiIngredient>(input);
     if (gold > 0) {
-      this.input
-          .add(EmiIngredient.of(Ingredient.ofStacks(BlockGameItems.GOLD_COIN.getItemStack().copyWithCount(gold))));
+      this.input.add(BlockGameItems.GOLD_COIN.copy().setAmount(gold));
     }
     this.output = output;
   }
@@ -40,7 +38,7 @@ public class BlockGameRecipe implements EmiRecipe {
 
   // normal slots are 18x18
   public static final int INPUT_SIZE = 18;
-    // large slots are 26x26
+  // large slots are 26x26
   public static final int OUTPUT_SIZE = 26;
   public static final int INPUT_COLUMNS = (WIDTH - OUTPUT_SIZE - 2 * BORDER) / (INPUT_SIZE + GAP);
 
@@ -71,11 +69,10 @@ public class BlockGameRecipe implements EmiRecipe {
 
   @Override
   public int getDisplayHeight() {
-    final int input_rows = (int)Math.ceil((double)input.size() / (double)INPUT_COLUMNS);
+    final int input_rows = (int) Math.ceil((double) input.size() / (double) INPUT_COLUMNS);
     return Math.max(
-      input_rows * 18 + (input_rows - 1) * GAP + 2 * BORDER,
-      output.size() * 26 + 2 * BORDER
-    );
+        input_rows * 18 + (input_rows - 1) * GAP + 2 * BORDER,
+        output.size() * 26 + 2 * BORDER);
   }
 
   @Override
@@ -92,7 +89,8 @@ public class BlockGameRecipe implements EmiRecipe {
       widgets.addSlot(output.get(0), 134 - BORDER - OUTPUT_SIZE, BORDER).large(true).recipeContext(this);
     } else {
       for (int i = 0; i < output.size(); i++) {
-        widgets.addSlot(output.get(i), 134 - BORDER - OUTPUT_SIZE, BORDER + (OUTPUT_SIZE + GAP) * i).recipeContext(this);
+        widgets.addSlot(output.get(i), 134 - BORDER - OUTPUT_SIZE, BORDER + (OUTPUT_SIZE + GAP) * i)
+            .recipeContext(this);
       }
     }
   }

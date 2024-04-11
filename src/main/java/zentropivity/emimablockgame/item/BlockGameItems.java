@@ -1,6 +1,7 @@
 package zentropivity.emimablockgame.item;
 
 import java.util.Map;
+import java.util.Optional;
 
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 
@@ -18,12 +19,23 @@ import java.util.HashMap;
 public class BlockGameItems {
   private static final Map<String, EmiStack> ITEMS = new HashMap<>();
 
+  public static final String ITEM_ID_TAG = "MMOITEMS_ITEM_ID";
+
+  public static final Comparison COMPAREMMOITEM = Comparison.compareData(stack -> {
+      Optional<String> o = Optional.ofNullable(stack.getNbt()).map(s -> s.getString(ITEM_ID_TAG));
+      if (o.isPresent()) {
+          return o.get();
+      } else {
+          return "";
+      }
+  });
+
   public static EmiStack createItem(Item item, String bgItem, String name) {
     ItemStack Stack = new ItemStack(item);
     // Stack.setCount(0);
 
     String nbt = "{ \"display\": {\"Name\": '{\"text\":\"" + name
-        + "\",\"color\":\"white\",\"italic\":false}'}, \"MMOITEMS_ITEM_ID\": \"" + bgItem + "\" }";
+        + "\",\"color\":\"white\",\"italic\":false}'}, \"" + ITEM_ID_TAG + "\": \"" + bgItem + "\" }";
 
     NbtCompound NBT = new NbtCompound();
     try {
@@ -33,7 +45,9 @@ public class BlockGameItems {
     }
     Stack.setNbt(NBT);
 
-    EmiStack out = EmiStack.of(Stack).comparison(Comparison.compareNbt());
+    EmiStack out = EmiStack.of(Stack);
+    out.comparison(COMPAREMMOITEM);
+
     ITEMS.put(bgItem, out);
 
     return out;
@@ -260,6 +274,46 @@ public class BlockGameItems {
       DOUGH = createItem(Items.BROWN_DYE, "DOUGH", "Dough"),
       EARTHEN_HEART = createItem(Items.TURTLE_EGG, "EARTHEN_HEART", "Earthen Heart"),
       EASTER_LAMB = createItem(Items.COOKED_MUTTON, "EASTER_LAMB", "Easter Lamb"),
+      EASTER_2024_RANGER_HELMET = createItem(Items.LEATHER_HELMET, "2024_EASTER_RANGER_HELMET",
+          "Antennae of the Lime Hawk Moth"),
+      EASTER_2024_RANGER_CHESTPLATE = createItem(Items.LEATHER_CHESTPLATE, "2024_EASTER_RANGER_CHESTPLATE",
+          "Thorax of the Lime Hawk Moth"),
+      EASTER_2024_RANGER_LEGGINGS = createItem(Items.LEATHER_LEGGINGS, "2024_EASTER_RANGER_LEGGINGS",
+          "Glutes of the Lime Hawk Moth"),
+      EASTER_2024_RANGER_BOOTS = createItem(Items.LEATHER_BOOTS, "2024_EASTER_RANGER_BOOTS",
+          "Claws of the Lime Hawk Moth"),
+      EASTER_2024_WIZARD_HELMET = createItem(Items.LEATHER_HELMET, "2024_EASTER_WIZARD_HELMET",
+          "Antennae of the Comet Moth"),
+      EASTER_2024_WIZARD_CHESTPLATE = createItem(Items.LEATHER_CHESTPLATE, "2024_EASTER_WIZARD_CHESTPLATE",
+          "Thorax of the Comet Moth"),
+      EASTER_2024_WIZARD_LEGGINGS = createItem(Items.LEATHER_LEGGINGS, "2024_EASTER_WIZARD_LEGGINGS",
+          "Glutes of the Comet Moth"),
+      EASTER_2024_WIZARD_BOOTS = createItem(Items.LEATHER_BOOTS, "2024_EASTER_WIZARD_BOOTS",
+          "Claws of the Comet Moth"),
+      EASTER_2024_WARRIOR_HELMET = createItem(Items.LEATHER_HELMET, "2024_EASTER_WARRIOR_HELMET",
+          "Antennae of the Deaths Head Moth"),
+      EASTER_2024_WARRIOR_CHESTPLATE = createItem(Items.LEATHER_CHESTPLATE, "2024_EASTER_WARRIOR_CHESTPLATE",
+          "Thorax of the Deaths Head Moth"),
+      EASTER_2024_WARRIOR_LEGGINGS = createItem(Items.LEATHER_LEGGINGS, "2024_EASTER_WARRIOR_LEGGINGS",
+          "Glutes of the Deaths Head Moth"),
+      EASTER_2024_WARRIOR_BOOTS = createItem(Items.LEATHER_BOOTS, "2024_EASTER_WARRIOR_BOOTS",
+          "Claws of the Deaths Head Moth"),
+      EASTER_2024_GUARDIAN_HELMET = createItem(Items.LEATHER_HELMET, "2024_EASTER_GUARDIAN_HELMET",
+          "Antennae of the Atlas Moth"),
+      EASTER_2024_GUARDIAN_CHESTPLATE = createItem(Items.LEATHER_CHESTPLATE, "2024_EASTER_GUARDIAN_CHESTPLATE",
+          "Thorax of the Atlas Moth"),
+      EASTER_2024_GUARDIAN_LEGGINGS = createItem(Items.LEATHER_LEGGINGS, "2024_EASTER_GUARDIAN_LEGGINGS",
+          "Glutes of the Atlas Moth"),
+      EASTER_2024_GUARDIAN_BOOTS = createItem(Items.LEATHER_BOOTS, "2024_EASTER_GUARDIAN_BOOTS",
+          "Claws of the Atlas Moth"),
+      EASTER_2024_THAUMATURGE_HELMET = createItem(Items.LEATHER_HELMET, "2024_EASTER_THAUMATURGE_HELMET",
+          "Antennae of the Luna Moth"),
+      EASTER_2024_THAUMATURGE_CHESTPLATE = createItem(Items.LEATHER_CHESTPLATE, "2024_EASTER_THAUMATURGE_CHESTPLATE",
+          "Thorax of the Luna Moth"),
+      EASTER_2024_THAUMATURGE_LEGGINGS = createItem(Items.LEATHER_LEGGINGS, "2024_EASTER_THAUMATURGE_LEGGINGS",
+          "Glutes of the Luna Moth"),
+      EASTER_2024_THAUMATURGE_BOOTS = createItem(Items.LEATHER_BOOTS, "2024_EASTER_THAUMATURGE_BOOTS",
+          "Claws of the Luna Moth"),
       EGGNOG = createItem(Items.POTION, "EGGNOG", "Eggnog"),
       ESSENCE_CORRUPTED = createItem(Items.BLACK_DYE, "ESSENCE_CORRUPTED", "Corrupted Essence"),
       ESSENCE_ROCKY = createItem(Items.BROWN_DYE, "ESSENCE_EARTH", "Rocky Essence"),
@@ -412,19 +466,31 @@ public class BlockGameItems {
       PETAL_SUNFLOWER = createItem(Items.YELLOW_DYE, "PETAL_SUNFLOWER", "Sunflower Petal"),
       RUNESTONE_INERT = createItem(Items.NETHERITE_INGOT, "KEY_INERT_ROTTENMAW", "Inert Runestone"),
       RUNESTONE_FIRST_FATHER = createItem(Items.NETHERITE_INGOT, "KEY_ROTTENMAW_1", "Runestone of the First Father"),
-      // KEY_ROTTENMAW_2 = createItem(Items.NETHERITE_INGOT, "KEY_ROTTENMAW_2", "Key Rottenmaw 2"),
-      // KEY_ROTTENMAW_3 = createItem(Items.NETHERITE_INGOT, "KEY_ROTTENMAW_3", "Key Rottenmaw 3"),
-      // KEY_ROTTENMAW_4 = createItem(Items.NETHERITE_INGOT, "KEY_ROTTENMAW_4", "Key Rottenmaw 4"),
+      // KEY_ROTTENMAW_2 = createItem(Items.NETHERITE_INGOT, "KEY_ROTTENMAW_2", "Key
+      // Rottenmaw 2"),
+      // KEY_ROTTENMAW_3 = createItem(Items.NETHERITE_INGOT, "KEY_ROTTENMAW_3", "Key
+      // Rottenmaw 3"),
+      // KEY_ROTTENMAW_4 = createItem(Items.NETHERITE_INGOT, "KEY_ROTTENMAW_4", "Key
+      // Rottenmaw 4"),
       RUNESTONE_FIRST_SON = createItem(Items.NETHERITE_INGOT, "KEY_ROTTENMAW_5", "Runestone of the First Son"),
-      // KEY_ROTTENMAW_6 = createItem(Items.NETHERITE_INGOT, "KEY_ROTTENMAW_6", "Key Rottenmaw 6"),
-      // KEY_ROTTENMAW_7 = createItem(Items.NETHERITE_INGOT, "KEY_ROTTENMAW_7", "Key Rottenmaw 7"),
-      // KEY_ROTTENMAW_8 = createItem(Items.NETHERITE_INGOT, "KEY_ROTTENMAW_8", "Key Rottenmaw 8"),
-      // KROGNARS_BLADE = createItem(Items.GOLDEN_SWORD, "KROGNARS_BLADE", "Krognars Blade"),
-      // KROGNARS_BOOTS = createItem(Items.GOLDEN_BOOTS, "KROGNARS_BOOTS", "Krognars Boots"),
-      // KROGNARS_CHESTPLATE = createItem(Items.GOLDEN_CHESTPLATE, "KROGNARS_CHESTPLATE", "Krognars Chestplate"),
-      // KROGNARS_CLEAVER = createItem(Items.GOLDEN_AXE, "KROGNARS_CLEAVER", "Krognars Cleaver"),
-      // KROGNARS_HELMET = createItem(Items.GOLDEN_HELMET, "KROGNARS_HELMET", "Krognars Helmet"),
-      // KROGNARS_LEGGINGS = createItem(Items.GOLDEN_LEGGINGS, "KROGNARS_LEGGINGS", "Krognars Leggings"),
+      // KEY_ROTTENMAW_6 = createItem(Items.NETHERITE_INGOT, "KEY_ROTTENMAW_6", "Key
+      // Rottenmaw 6"),
+      // KEY_ROTTENMAW_7 = createItem(Items.NETHERITE_INGOT, "KEY_ROTTENMAW_7", "Key
+      // Rottenmaw 7"),
+      // KEY_ROTTENMAW_8 = createItem(Items.NETHERITE_INGOT, "KEY_ROTTENMAW_8", "Key
+      // Rottenmaw 8"),
+      // KROGNARS_BLADE = createItem(Items.GOLDEN_SWORD, "KROGNARS_BLADE", "Krognars
+      // Blade"),
+      // KROGNARS_BOOTS = createItem(Items.GOLDEN_BOOTS, "KROGNARS_BOOTS", "Krognars
+      // Boots"),
+      // KROGNARS_CHESTPLATE = createItem(Items.GOLDEN_CHESTPLATE,
+      // "KROGNARS_CHESTPLATE", "Krognars Chestplate"),
+      // KROGNARS_CLEAVER = createItem(Items.GOLDEN_AXE, "KROGNARS_CLEAVER", "Krognars
+      // Cleaver"),
+      // KROGNARS_HELMET = createItem(Items.GOLDEN_HELMET, "KROGNARS_HELMET",
+      // "Krognars Helmet"),
+      // KROGNARS_LEGGINGS = createItem(Items.GOLDEN_LEGGINGS, "KROGNARS_LEGGINGS",
+      // "Krognars Leggings"),
       KROGNARS_MACE = createItem(Items.CHAIN, "KROGNARS_MACE", "Krognars Mace"),
       KROGNARS_BASTION_COMPASS = createItem(Items.STICK, "Krognars Bastion - Compass", "Krognars Bastion - Compass"),
       LAMP_EVERBURNING = createItem(Items.SOUL_LANTERN, "LAMP_EVERBURNING", "Lamp Everburning"),
@@ -679,18 +745,24 @@ public class BlockGameItems {
       RECIPE_TOME_STEEL_HELMET = createItem(Items.BOOK, "RECIPE_TOME_STEEL_HELMET", "Recipe Tome Steel Helmet"),
       RECIPE_TOME_STEEL_LEGGINGS = createItem(Items.BOOK, "RECIPE_TOME_STEEL_LEGGINGS", "Recipe Tome Steel Leggings"),
       RECIPE_TOME_UNSETTLING_BOW = createItem(Items.BOOK, "RECIPE_TOME_UNSETTLING_BOW", "Recipe Tome Unsettling Bow"),
-      // REPAIR_PATCH_LEATHER = createItem(Items.DRIED_KELP, "REPAIR_PATCH_LEATHER", "Repair Patch Leather"),
-      // REPAIR_PATCH_ZOMBIE = createItem(Items.DRIED_KELP, "REPAIR_PATCH_ZOMBIE", "Repair Patch Zombie"),
+      // REPAIR_PATCH_LEATHER = createItem(Items.DRIED_KELP, "REPAIR_PATCH_LEATHER",
+      // "Repair Patch Leather"),
+      // REPAIR_PATCH_ZOMBIE = createItem(Items.DRIED_KELP, "REPAIR_PATCH_ZOMBIE",
+      // "Repair Patch Zombie"),
       REPAIR_POWDER_ARCANE_COMMON = createItem(Items.REDSTONE, "REPAIR_POWDER_ARCANE_COMMON",
           "Arcane Repair Powder"),
-      REPAIR_POWDER_ARCANE_EPIC = createItem(Items.REDSTONE, "REPAIR_POWDER_ARCANE_EPIC", "Sagely Repair Powder Arcane"),
-      REPAIR_POWDER_ARCANE_RARE = createItem(Items.REDSTONE, "REPAIR_POWDER_ARCANE_RARE", "Wizardly Repair Powder Arcane"),
+      REPAIR_POWDER_ARCANE_EPIC = createItem(Items.REDSTONE, "REPAIR_POWDER_ARCANE_EPIC",
+          "Sagely Repair Powder Arcane"),
+      REPAIR_POWDER_ARCANE_RARE = createItem(Items.REDSTONE, "REPAIR_POWDER_ARCANE_RARE",
+          "Wizardly Repair Powder Arcane"),
       REPAIR_POWDER_ARCANE_UNCOMMON = createItem(Items.REDSTONE, "REPAIR_POWDER_ARCANE_UNCOMMON",
           "Charged Arcane Repair Powder"),
-      // REPAIR_POWDER_BASIC = createItem(Items.SUGAR, "REPAIR_POWDER_BASIC", "Repair Powder Basic"),
+      // REPAIR_POWDER_BASIC = createItem(Items.SUGAR, "REPAIR_POWDER_BASIC", "Repair
+      // Powder Basic"),
       REPAIR_POWDER_COMMON = createItem(Items.SUGAR, "REPAIR_POWDER_COMMON", "Common Repair Powder"),
       REPAIR_POWDER_EPIC = createItem(Items.SUGAR, "REPAIR_POWDER_EPIC", "Epic Repair Powder"),
-      // REPAIR_POWDER_EXOTIC = createItem(Items.SUGAR, "REPAIR_POWDER_EXOTIC", "Repair Powder Exotic"),
+      // REPAIR_POWDER_EXOTIC = createItem(Items.SUGAR, "REPAIR_POWDER_EXOTIC",
+      // "Repair Powder Exotic"),
       REPAIR_POWDER_RARE = createItem(Items.SUGAR, "REPAIR_POWDER_RARE", "Rare Repair Powder"),
       REPAIR_POWDER_UNCOMMON = createItem(Items.SUGAR, "REPAIR_POWDER_UNCOMMON", "Uncommon Repair Powder"),
       REPLICATING_AMETHYST = createItem(Items.BUDDING_AMETHYST, "REPLICATING_AMETHYST", "Replicating Amethyst"),
@@ -863,11 +935,15 @@ public class BlockGameItems {
       STARTER_BOTANIST_WHEAT = createItem(Items.GREEN_DYE, "STARTER_BOTANIST_WHEAT", "Crumpled Leaf - Wheat"),
       STARTER_CHRISTMAS = createItem(Items.SNOW, "STARTER_CHRISTMAS", "Starter Christmas"),
       STARTER_FISHERMAN_COD = createItem(Items.PAPER, "STARTER_FISHERMAN_COD", "Wet Grocery List - Raw Cod"),
-      // STARTER_FISHERMAN_FROST = createItem(Items.PAPER, "STARTER_FISHERMAN_FROST", "Starter Fisherman Frost"),
-      STARTER_FISHERMAN_PUFFER = createItem(Items.PAPER, "STARTER_FISHERMAN_PUFFER", "Moist Grocery List - Raw Pufferfish"),
+      // STARTER_FISHERMAN_FROST = createItem(Items.PAPER, "STARTER_FISHERMAN_FROST",
+      // "Starter Fisherman Frost"),
+      STARTER_FISHERMAN_PUFFER = createItem(Items.PAPER, "STARTER_FISHERMAN_PUFFER",
+          "Moist Grocery List - Raw Pufferfish"),
       STARTER_FISHERMAN_SALMON = createItem(Items.PAPER, "STARTER_FISHERMAN_SALMON", "Damp Grocery List - Raw Salmon"),
-      STARTER_FISHERMAN_TROPICAL = createItem(Items.PAPER, "STARTER_FISHERMAN_TROPICAL", "Soaked Grocery List - Tropical Fish"),
-      // STARTER_FISHERMAN_WATER = createItem(Items.PAPER, "STARTER_FISHERMAN_WATER", "Starter Fisherman Water"),
+      STARTER_FISHERMAN_TROPICAL = createItem(Items.PAPER, "STARTER_FISHERMAN_TROPICAL",
+          "Soaked Grocery List - Tropical Fish"),
+      // STARTER_FISHERMAN_WATER = createItem(Items.PAPER, "STARTER_FISHERMAN_WATER",
+      // "Starter Fisherman Water"),
       STARTER_HALLOWEEN = createItem(Items.JACK_O_LANTERN, "STARTER_HALLOWEEN", "Starter Halloween"),
       STARTER_HUNTER_OUTPOST_DESTROYED = createItem(Items.BARREL, "STARTER_HUNTER_OUTPOST_DESTROYED",
           "Starter Hunter Outpost Destroyed"),
@@ -887,12 +963,14 @@ public class BlockGameItems {
       STARTER_LUMBERJACK_SPRUCE = createItem(Items.SPRUCE_LOG, "STARTER_LUMBERJACK_SPRUCE",
           "Cut Stump - Spruce"),
       STARTER_MINER_COPPER = createItem(Items.CHARCOAL, "STARTER_MINER_COPPER", "Cracked Geode - Copper Ingots"),
-      // STARTER_MINER_EARTH = createItem(Items.CHARCOAL, "STARTER_MINER_EARTH", "Starter Miner Earth"),
+      // STARTER_MINER_EARTH = createItem(Items.CHARCOAL, "STARTER_MINER_EARTH",
+      // "Starter Miner Earth"),
       STARTER_MINER_GEODE = createItem(Items.CHARCOAL, "STARTER_MINER_GEODE", "Chalky Geode - Amethyst Blocks"),
       STARTER_MINER_IRON = createItem(Items.CHARCOAL, "STARTER_MINER_IRON", "Chunky Geode - Iron Ingots"),
       STARTER_MINER_LAPIS = createItem(Items.CHARCOAL, "STARTER_MINER_LAPIS", "Crunchy Geode - Lapis Lazuli"),
       STARTER_MINER_REDSTONE = createItem(Items.CHARCOAL, "STARTER_MINER_REDSTONE", "Combustible Geode - Redstone"),
-      // STARTER_MINER_SPARK = createItem(Items.CHARCOAL, "STARTER_MINER_SPARK", "Starter Miner Spark"),
+      // STARTER_MINER_SPARK = createItem(Items.CHARCOAL, "STARTER_MINER_SPARK",
+      // "Starter Miner Spark"),
       STARTER_RUNECARVER_CLARITY = createItem(Items.CHISELED_POLISHED_BLACKSTONE, "STARTER_RUNECARVER_CLARITY",
           "Carved Chunk - Clarity"),
       STARTER_RUNECARVER_MUDDLED = createItem(Items.CHISELED_POLISHED_BLACKSTONE, "STARTER_RUNECARVER_MUDDLED",
@@ -985,6 +1063,7 @@ public class BlockGameItems {
       THAUMATURG_BOOTS = createItem(Items.LEATHER_BOOTS, "THAUMATURG_BOOTS", "Thaumaturg Boots"),
       TOKEN_CHRISTMAS = createItem(Items.CLAY_BALL, "TOKEN_CHRISTMAS", "Token Christmas"),
       TOKEN_EASTER = createItem(Items.TURTLE_EGG, "TOKEN_EASTER", "Token Easter"),
+      TOKEN_EASTER_2024 = createItem(Items.TURTLE_EGG, "TOKEN_EASTER_2024", "Egg of the Mothman"),
       TOKEN_HALLOWEEN = createItem(Items.PUMPKIN, "TOKEN_HALLOWEEN", "Token Halloween"),
       TOKEN_HUNTER_OUTPOST_DESTROYED = createItem(Items.NETHER_BRICK, "TOKEN_HUNTER_OUTPOST_DESTROYED",
           "Token Hunter Outpost Destroyed"),
@@ -1106,6 +1185,13 @@ public class BlockGameItems {
   public static void addItems(EmiRegistry registry) {
     ITEMS.forEach((k, v) -> {
       registry.addEmiStack(v);
+      // Better comparison?
+      // compareNbt is too restrictive
+      // default is too lenient
+      // -> check for NBT data, if MMOITEMS_ITEM_ID is found, then compare by its
+      // value
+      // TLDR this does not do good, vanilla recipes get removed
+      // registry.setDefaultComparison(v, COMPAREMMOITEM);
     });
   }
 }

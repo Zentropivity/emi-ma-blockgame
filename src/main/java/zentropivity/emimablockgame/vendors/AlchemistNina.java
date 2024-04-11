@@ -69,7 +69,7 @@ public class AlchemistNina extends AbstractVendor {
         BlockGameItems.ESSENCE_CORRUPTED.copy().setAmount(64),
         BlockGameItems.CORRUPTED_SHARD);
 
-    recipe("animated/bone", 0, List.of(
+    recipe("blackstone", 0, List.of(
         EmiStack.of(Items.BLACK_DYE),
         EmiStack.of(Items.STONE)),
         EmiStack.of(Items.BLACKSTONE));

@@ -25,12 +25,12 @@ public class MinerGeorge extends AbstractVendor {
         BlockGameItems.REPAIR_POWDER_COMMON);
 
     sameOutRecipes("repair/arcane/common", 0, 5, List.of(
-        EmiStack.of(Items.LAPIS_LAZULI).setAmount(8),
-        EmiStack.of(Items.AMETHYST_SHARD).setAmount(8)),
+        EmiStack.of(Items.LAPIS_LAZULI, 8),
+        EmiStack.of(Items.AMETHYST_SHARD, 8)),
         BlockGameItems.REPAIR_POWDER_ARCANE_COMMON);
 
     recipe("repair/arcane/uncommon", 10,
-        Items.AMETHYST_BLOCK.getDefaultStack(),
+        EmiStack.of(Items.AMETHYST_BLOCK),
         BlockGameItems.REPAIR_POWDER_ARCANE_UNCOMMON);
 
     recipe("xptome/mining", 50,

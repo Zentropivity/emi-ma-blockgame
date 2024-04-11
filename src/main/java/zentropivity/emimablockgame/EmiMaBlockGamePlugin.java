@@ -41,6 +41,10 @@ import zentropivity.emimablockgame.vendors.WarriorWilly;
 import zentropivity.emimablockgame.vendors.WoolweaverPorfirio;
 import zentropivity.emimablockgame.vendors.RunecarverStonebeard;
 import zentropivity.emimablockgame.vendors.SilkweaverWendy;
+import zentropivity.emimablockgame.vendors.OlEggman;
+import zentropivity.emimablockgame.vendors.Feathers;
+import zentropivity.emimablockgame.vendors.DavidSPumpkins;
+
 import dev.emi.emi.api.EmiPlugin;
 import dev.emi.emi.api.EmiRegistry;
 
@@ -88,10 +92,14 @@ public class EmiMaBlockGamePlugin implements EmiPlugin {
     new ChefKen(),
     new ChefSue(),
     new TeamasterPigglyWiggly(),
-    // other
+    // others at Origin
     new PotionsellerJustin(),
     new ArtificerEitri(),
-    new HunterHanzo()
+    new HunterHanzo(),
+    // event
+    new OlEggman(),
+    new Feathers(),
+    new DavidSPumpkins()
   );
 
   @Override

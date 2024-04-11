@@ -58,6 +58,12 @@ _Checked on 2024-04-11._
     - [ ] Artificer Eitri
     - [ ] Potion Seller Justin
     - [ ] Hunter Hanzo
+  - Event
+    - [ ] Ol' Eggman (Mothman March)
+    - I decided to add them when their time comes:
+      - Feathers (Turkey Terror)
+      - David S. Pumpkins (Halloween Bash)
+      - _Unknown NPC_ (Winter Wonderland)
 
 ## Contributing and support
 
