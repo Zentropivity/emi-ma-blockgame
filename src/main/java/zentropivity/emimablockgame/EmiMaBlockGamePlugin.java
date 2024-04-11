@@ -31,6 +31,7 @@ import zentropivity.emimablockgame.vendors.BowyerBrent;
 import zentropivity.emimablockgame.vendors.ChefKen;
 import zentropivity.emimablockgame.vendors.ChefSue;
 import zentropivity.emimablockgame.vendors.ArchaeologistMortimer;
+import zentropivity.emimablockgame.vendors.ArtificerEitri;
 import zentropivity.emimablockgame.vendors.LumberjackPaul;
 import zentropivity.emimablockgame.vendors.SooieCasa;
 import zentropivity.emimablockgame.vendors.SpellcrafterSally;
@@ -68,12 +69,11 @@ public class EmiMaBlockGamePlugin implements EmiPlugin {
     new BotanistHesha(),
     new RunecarverBrokkr(),
     // crafting general
-    new RobotSmith(),
-    new RobotForge(),
     new BlacksmithMarkus(),
     new AlchemistNina(),
-    new PotionsellerJustin(),
-    new HunterHanzo(),
+    // artificial people
+    new RobotSmith(),
+    new RobotForge(),
     new GolemMetal(),
     // fighting classes
     new WarriorWilly(),
@@ -87,7 +87,11 @@ public class EmiMaBlockGamePlugin implements EmiPlugin {
     // food
     new ChefKen(),
     new ChefSue(),
-    new TeamasterPigglyWiggly()
+    new TeamasterPigglyWiggly(),
+    // other
+    new PotionsellerJustin(),
+    new ArtificerEitri(),
+    new HunterHanzo()
   );
 
   @Override

@@ -9,6 +9,7 @@ import dev.emi.emi.api.recipe.EmiRecipeCategory;
 import dev.emi.emi.api.render.EmiRenderable;
 import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import zentropivity.emimablockgame.recipe.BlockGameRecipe;
@@ -45,6 +46,9 @@ public class AbstractVendor {
   // List<EmiStack> output) {}
 
   protected void recipe(String idBase, int gold, ItemStack input, EmiStack output) {
+    recipe(idBase, gold, EmiStack.of(input), output);
+  }
+  protected void recipe(String idBase, int gold, Item input, EmiStack output) {
     recipe(idBase, gold, EmiStack.of(input), output);
   }
 

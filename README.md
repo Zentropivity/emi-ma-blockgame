@@ -36,9 +36,13 @@ _Checked on 2024-04-11._
     - [x] Alchemist Nina
     - [x] Blacksmith Markus
   - Artificial People
-    - [ ] Robot Smith
-    - [ ] Robot Forge
-    - [ ] Golem Metal
+    - [x] Robot Smith
+    - [x] Robot Forge
+    - [x] Golem Metal
+  - Food Crafting People
+    - [ ] Chef Ken
+    - [ ] Chef Sue
+    - [ ] Tea Master Piggly Wiggly
   - Battle Class Crafting People
     - [ ] Leatherworker Seymour
     - [ ] Bowyer Brent
@@ -48,10 +52,6 @@ _Checked on 2024-04-11._
     - [ ] Thaumaturge Gregory
     - [ ] Warrior Willy
     - [ ] Guardian Armand
-  - Food Crafting People
-    - [ ] Chef Ken
-    - [ ] Chef Sue
-    - [ ] Tea Master Piggly Wiggly
   - Other People
     - [ ] Artificer Eitri
     - [ ] Potion Seller Justin
