@@ -43,52 +43,52 @@ public class LumberjackLarry extends AbstractVendor {
         EmiStack.of(Items.SPRUCE_SAPLING, 64)), BlockGameItems.LUMBERJACK_BOOTS_2);
 
     recipe("lumberjack/armor/helmet/3", 100, List.of(BlockGameItems.LUMBERJACK_HELMET_2,
-        BlockGameItems.WHIPPING_WIND.copy().setAmount(2),
+        BlockGameItems.WHIPPING_WINDS.copy().setAmount(2),
         EmiStack.of(Items.DARK_OAK_SAPLING, 64)), BlockGameItems.LUMBERJACK_HELMET_3);
 
     recipe("lumberjack/armor/chestplate/3", 100, List.of(BlockGameItems.LUMBERJACK_CHESTPLATE_2,
-        BlockGameItems.WHIPPING_WIND.copy().setAmount(2),
+        BlockGameItems.WHIPPING_WINDS.copy().setAmount(2),
         EmiStack.of(Items.DARK_OAK_SAPLING, 64)), BlockGameItems.LUMBERJACK_CHESTPLATE_3);
 
     recipe("lumberjack/armor/leggings/3", 100, List.of(BlockGameItems.LUMBERJACK_LEGGINGS_2,
-        BlockGameItems.WHIPPING_WIND.copy().setAmount(2),
+        BlockGameItems.WHIPPING_WINDS.copy().setAmount(2),
         EmiStack.of(Items.DARK_OAK_SAPLING, 64)), BlockGameItems.LUMBERJACK_LEGGINGS_3);
 
     recipe("lumberjack/armor/boots/3", 100, List.of(BlockGameItems.LUMBERJACK_BOOTS_2,
-        BlockGameItems.WHIPPING_WIND.copy().setAmount(2),
+        BlockGameItems.WHIPPING_WINDS.copy().setAmount(2),
         EmiStack.of(Items.DARK_OAK_SAPLING, 64)), BlockGameItems.LUMBERJACK_BOOTS_3);
 
     recipe("lumberjack/armor/helmet/4", 250, List.of(BlockGameItems.LUMBERJACK_HELMET_3,
         BlockGameItems.PRISTINE_CORE,
-        BlockGameItems.WHIPPING_WIND.copy().setAmount(4),
+        BlockGameItems.WHIPPING_WINDS.copy().setAmount(4),
         EmiStack.of(Items.ACACIA_SAPLING, 64),
         EmiStack.of(Items.JUNGLE_SAPLING, 64),
         EmiStack.of(Items.BIRCH_SAPLING, 64)), BlockGameItems.LUMBERJACK_HELMET_4);
 
     recipe("lumberjack/armor/chestplate/4", 250, List.of(BlockGameItems.LUMBERJACK_CHESTPLATE_3,
         BlockGameItems.PRISTINE_CORE,
-        BlockGameItems.WHIPPING_WIND.copy().setAmount(4),
+        BlockGameItems.WHIPPING_WINDS.copy().setAmount(4),
         EmiStack.of(Items.ACACIA_SAPLING, 64),
         EmiStack.of(Items.JUNGLE_SAPLING, 64),
         EmiStack.of(Items.BIRCH_SAPLING, 64)), BlockGameItems.LUMBERJACK_CHESTPLATE_4);
 
     recipe("lumberjack/armor/leggings/4", 250, List.of(BlockGameItems.LUMBERJACK_LEGGINGS_3,
         BlockGameItems.PRISTINE_CORE,
-        BlockGameItems.WHIPPING_WIND.copy().setAmount(4),
+        BlockGameItems.WHIPPING_WINDS.copy().setAmount(4),
         EmiStack.of(Items.ACACIA_SAPLING, 64),
         EmiStack.of(Items.JUNGLE_SAPLING, 64),
         EmiStack.of(Items.BIRCH_SAPLING, 64)), BlockGameItems.LUMBERJACK_LEGGINGS_4);
 
     recipe("lumberjack/armor/boots/4", 250, List.of(BlockGameItems.LUMBERJACK_BOOTS_3,
         BlockGameItems.PRISTINE_CORE,
-        BlockGameItems.WHIPPING_WIND.copy().setAmount(4),
+        BlockGameItems.WHIPPING_WINDS.copy().setAmount(4),
         EmiStack.of(Items.ACACIA_SAPLING, 64),
         EmiStack.of(Items.JUNGLE_SAPLING, 64),
         EmiStack.of(Items.BIRCH_SAPLING, 64)), BlockGameItems.LUMBERJACK_BOOTS_4);
 
     recipe("lumberjack/armor/helmet/5", 500, List.of(BlockGameItems.LUMBERJACK_HELMET_4,
         BlockGameItems.PRISTINE_CORE.copy().setAmount(2),
-        BlockGameItems.WHIPPING_WIND.copy().setAmount(6),
+        BlockGameItems.WHIPPING_WINDS.copy().setAmount(6),
         EmiStack.of(Items.FLOWERING_AZALEA_LEAVES, 16),
         EmiStack.of(Items.AZALEA_LEAVES, 16),
         EmiStack.of(Items.DARK_OAK_LEAVES, 16),
@@ -100,7 +100,7 @@ public class LumberjackLarry extends AbstractVendor {
 
     recipe("lumberjack/armor/chestplate/5", 500, List.of(BlockGameItems.LUMBERJACK_CHESTPLATE_4,
         BlockGameItems.PRISTINE_CORE.copy().setAmount(2),
-        BlockGameItems.WHIPPING_WIND.copy().setAmount(6),
+        BlockGameItems.WHIPPING_WINDS.copy().setAmount(6),
         EmiStack.of(Items.FLOWERING_AZALEA_LEAVES, 16),
         EmiStack.of(Items.AZALEA_LEAVES, 16),
         EmiStack.of(Items.DARK_OAK_LEAVES, 16),
@@ -112,7 +112,7 @@ public class LumberjackLarry extends AbstractVendor {
 
     recipe("lumberjack/armor/leggings/5", 500, List.of(BlockGameItems.LUMBERJACK_LEGGINGS_4,
         BlockGameItems.PRISTINE_CORE.copy().setAmount(2),
-        BlockGameItems.WHIPPING_WIND.copy().setAmount(6),
+        BlockGameItems.WHIPPING_WINDS.copy().setAmount(6),
         EmiStack.of(Items.FLOWERING_AZALEA_LEAVES, 16),
         EmiStack.of(Items.AZALEA_LEAVES, 16),
         EmiStack.of(Items.DARK_OAK_LEAVES, 16),
@@ -124,7 +124,7 @@ public class LumberjackLarry extends AbstractVendor {
 
     recipe("lumberjack/armor/boots/5", 500, List.of(BlockGameItems.LUMBERJACK_BOOTS_4,
         BlockGameItems.PRISTINE_CORE.copy().setAmount(2),
-        BlockGameItems.WHIPPING_WIND.copy().setAmount(6),
+        BlockGameItems.WHIPPING_WINDS.copy().setAmount(6),
         EmiStack.of(Items.FLOWERING_AZALEA_LEAVES, 16),
         EmiStack.of(Items.AZALEA_LEAVES, 16),
         EmiStack.of(Items.DARK_OAK_LEAVES, 16),
