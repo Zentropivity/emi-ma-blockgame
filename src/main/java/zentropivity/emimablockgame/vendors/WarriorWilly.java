@@ -6,6 +6,6 @@ import zentropivity.emimablockgame.item.BlockGameItems;
 
 public class WarriorWilly extends AbstractVendor {
   public WarriorWilly() {
-    super("warriorwilly", BlockGameItems.TOTEM_MONTU);
+    super("warriorwilly", BlockGameItems.WARRIOR_TOTEM_5);
   }
 }

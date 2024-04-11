@@ -6,6 +6,6 @@ import zentropivity.emimablockgame.item.BlockGameItems;
 
 public class SpellcrafterSally extends AbstractVendor {
   public SpellcrafterSally() {
-    super("spellcraftersally", BlockGameItems.FOCUS_DJEDI);
+    super("spellcraftersally", BlockGameItems.WIZARD_FOCUS_5);
   }
 }
