@@ -8,8 +8,6 @@ This is not associated in any official way with [BlockGame](https://blockgame.in
 
 ## Features, TODOs
 
-_Checked on 2024-04-12._
-
 - Items
   - [ ] Remove uncraftables, fix item names... gonna have to go through the whole list
   - [ ] Aliases for search
