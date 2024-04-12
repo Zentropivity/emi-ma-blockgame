@@ -61,6 +61,11 @@ This is not associated in any official way with [BlockGame](https://blockgame.in
       - David S. Pumpkins (Halloween Bash)
       - _Unknown NPC_ (Winter Wonderland)
 
+## Mod Dependencies
+
+- [EMI](https://modrinth.com/mod/emi) is the only mod that is required. Which also needs:
+  - [Fabric API](https://modrinth.com/mod/fabric-api) or [QFAPI](https://modrinth.com/mod/qsl)
+
 ## Contributing and support
 
 Pull requests are welcome. I am no _Java_ dev. (May rewrite it in Rust later... 🦀)
