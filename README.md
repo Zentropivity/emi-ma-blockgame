@@ -8,11 +8,12 @@ This is not associated in any official way with [BlockGame](https://blockgame.in
 
 ## Features, TODOs
 
-_Checked on 2024-04-11._
+_Checked on 2024-04-12._
 
 - [x] Items
-  - [ ] Remove uncraftables, fix item names
+  - [ ] Remove uncraftables, fix item names...
   - [ ] Aliases for search
+  - [ ] Colorize leather armors and potions
 - [ ] Recipes
   - Origin Hall
     - [x] Miner George
@@ -45,14 +46,14 @@ _Checked on 2024-04-11._
       - [ ] Add recipes I don't have...
     - [x] Tea Master Piggly Wiggly
   - Battle Class Crafting People
-    - [ ] Leatherworker Seymour
-    - [ ] Bowyer Brent
+    - [x] Leatherworker Seymour
+    - [x] Bowyer Brent
+    - [x] Warrior Willy
+    - [x] Guardian Armand
     - [ ] Silk Weaver Wendy
     - [ ] Spellcrafter Sally
     - [ ] Wool Weaver Porfirio
     - [ ] Thaumaturge Gregory
-    - [ ] Warrior Willy
-    - [ ] Guardian Armand
   - Other People
     - [x] Artificer Eitri
     - [x] Potion Seller Justin
