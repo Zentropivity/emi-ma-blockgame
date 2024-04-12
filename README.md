@@ -10,57 +10,55 @@ This is not associated in any official way with [BlockGame](https://blockgame.in
 
 _Checked on 2024-04-12._
 
-- [x] Items
-  - [ ] Remove uncraftables, fix item names...
+- Items
+  - [ ] Remove uncraftables, fix item names... gonna have to go through the whole list
   - [ ] Aliases for search
-  - [ ] Colorize leather armors and potions
-- [ ] Recipes
+  - [ ] Colorize leather armors and potions... gonna have to refactor item creation, easy?
+- Recipes
   - Origin Hall
-    - [x] Miner George
-    - [x] Lumberjack Paul
-    - [x] Archaeologist Mortimer
-    - [x] Fisherman Baelin
-    - [x] Botanist Mint
-    - [x] Runecarver Stonebeard
-    - [x] Souie Casa
-    - [x] Baron Warbucks
-    - [x] Mayor McCheese
+    - Miner George
+    - Lumberjack Paul
+    - Archaeologist Mortimer
+    - Fisherman Baelin
+    - Botanist Mint
+    - Runecarver Stonebeard
+    - Souie Casa
+    - Baron Warbucks
+    - Mayor McCheese
   - Profession Crafting People
-    - [x] Miner Steve
-    - [x] Lumberjack Larry
-    - [x] Archaeologist Indy
-    - [x] Fisherman Franky
-    - [x] Botanist Hesha
-    - [x] Runecarver Brokkr
+    - Miner Steve
+    - Lumberjack Larry
+    - Archaeologist Indy
+    - Fisherman Franky
+    - Botanist Hesha
+    - Runecarver Brokkr
   - Material Crafting People
-    - [x] Alchemist Nina
-    - [x] Blacksmith Markus
+    - Alchemist Nina
+    - Blacksmith Markus
   - Artificial People
-    - [x] Robot Smith
-    - [x] Robot Forge
-    - [x] Golem Metal
+    - Robot Smith
+    - Robot Forge
+    - Golem Metal
   - Food Crafting People
-    - [x] Chef Ken
-      - [ ] Add recipes I don't have...
-    - [x] Chef Sue
-      - [ ] Add recipes I don't have...
-    - [x] Tea Master Piggly Wiggly
+    - Chef Ken
+    - Chef Sue
+    - Tea Master Piggly Wiggly
   - Battle Class Crafting People
-    - [x] Leatherworker Seymour
-    - [x] Bowyer Brent
-    - [x] Warrior Willy
-    - [x] Guardian Armand
-    - [ ] Silk Weaver Wendy
-    - [ ] Spellcrafter Sally
-    - [ ] Wool Weaver Porfirio
-    - [ ] Thaumaturge Gregory
+    - Leatherworker Seymour
+    - Bowyer Brent
+    - Warrior Willy
+    - Guardian Armand
+    - Silk Weaver Wendy
+    - Spellcrafter Sally
+    - Wool Weaver Porfirio
+    - Thaumaturge Gregory
   - Other People
-    - [x] Artificer Eitri
-    - [x] Potion Seller Justin
-    - [x] Hunter Hanzo
+    - Artificer Eitri
+    - Potion Seller Justin
+    - Hunter Hanzo
   - Event
-    - [x] Ol' Eggman (Mothman March)
-    - I decided to add them when their time comes:
+    - Ol' Eggman (Mothman March)
+    - **I decided to add them when their time comes, along with recipes (food too)**
       - Feathers (Turkey Terror)
       - David S. Pumpkins (Halloween Bash)
       - _Unknown NPC_ (Winter Wonderland)
