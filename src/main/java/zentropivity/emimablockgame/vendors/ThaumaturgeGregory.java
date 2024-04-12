@@ -6,6 +6,6 @@ import zentropivity.emimablockgame.item.BlockGameItems;
 
 public class ThaumaturgeGregory extends AbstractVendor {
   public ThaumaturgeGregory() {
-    super("thaumaturgegregory", BlockGameItems.IMPLEMENT_HEKA);
+    super("thaumaturgegregory", BlockGameItems.THAUMATURGE_IMPLEMENT_5);
   }
 }

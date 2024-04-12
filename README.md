@@ -13,7 +13,6 @@ _Checked on 2024-04-11._
 - [x] Items
   - [ ] Remove uncraftables, fix item names
   - [ ] Aliases for search
-  - [ ] Fix comparison so pressing R or U on acquired items works
 - [ ] Recipes
   - Origin Hall
     - [x] Miner George
@@ -41,9 +40,9 @@ _Checked on 2024-04-11._
     - [x] Golem Metal
   - Food Crafting People
     - [x] Chef Ken
-      - [ ] Add recipes I don't have
+      - [ ] Add recipes I don't have...
     - [x] Chef Sue
-      - [ ] Add recipes I don't have
+      - [ ] Add recipes I don't have...
     - [x] Tea Master Piggly Wiggly
   - Battle Class Crafting People
     - [ ] Leatherworker Seymour
@@ -55,11 +54,11 @@ _Checked on 2024-04-11._
     - [ ] Warrior Willy
     - [ ] Guardian Armand
   - Other People
-    - [ ] Artificer Eitri
-    - [ ] Potion Seller Justin
-    - [ ] Hunter Hanzo
+    - [x] Artificer Eitri
+    - [x] Potion Seller Justin
+    - [x] Hunter Hanzo
   - Event
-    - [ ] Ol' Eggman (Mothman March)
+    - [x] Ol' Eggman (Mothman March)
     - I decided to add them when their time comes:
       - Feathers (Turkey Terror)
       - David S. Pumpkins (Halloween Bash)
@@ -73,5 +72,5 @@ Pull requests are welcome. I am no _Java_ dev. (May rewrite it in Rust later... 
 
 - Nelas, the author of [BlockGame Wiki](https://blockgame.piratesoftware.wiki) for the assistance
 - [BlockGame](https://piratesoftware.wiki/wiki/Blockgame) [Java](https://piratesoftware.wiki/wiki/Java) devs: **Jake** and [Thor](https://piratesoftware.wiki/wiki/Thor)
-- [PenguinTheFluffy](https://piratesoftware.wiki/wiki/PenguinTheFluffy) (among other talented artists) for the awesome resource pack  
+- [PenguinTheFluffy](https://piratesoftware.wiki/wiki/PenguinTheFluffy) (previously Notker) for the awesome resource pack  
   (which contains item IDs which made this project easier to start)

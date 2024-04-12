@@ -6,6 +6,6 @@ import zentropivity.emimablockgame.item.BlockGameItems;
 
 public class BowyerBrent extends AbstractVendor {
   public BowyerBrent() {
-    super("bowyerbrent", BlockGameItems.QUIVER_SATET);
+    super("bowyerbrent", BlockGameItems.RANGER_QUIVER_SATET);
   }
 }
