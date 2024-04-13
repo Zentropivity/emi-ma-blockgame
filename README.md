@@ -6,12 +6,9 @@ This mod is an extension to [EMI](https://github.com/emilyploszaj/emi), the feat
 
 This is not associated in any official way with [BlockGame](https://blockgame.info/), its merely a fan creation.
 
-## Features, TODOs
+## Features
 
 - Items
-  - [ ] Remove uncraftables, fix item names... gonna have to go through the whole list
-  - [ ] Aliases for search
-  - [ ] Colorize leather armors and potions... gonna have to refactor item creation, easy?
 - Recipes
   - Origin Hall
     - Miner George
@@ -70,9 +67,18 @@ This is not associated in any official way with [BlockGame](https://blockgame.in
 
 Pull requests are welcome. I am no _Java_ dev. (May rewrite it in Rust later... 🦀)
 
+### TODOs
+
+- Items
+  - Remove uncraftables, fix item names... gonna have to go through the whole list
+  - Aliases for search
+  - Colorize leather armors and potions... gonna have to refactor item creation, easy?
+- Recipes
+  - Make categories have NPC heads
+
 ## Special Thanks
 
 - Nelas, the author of [BlockGame Wiki](https://blockgame.piratesoftware.wiki) for the assistance
 - [BlockGame](https://piratesoftware.wiki/wiki/Blockgame) [Java](https://piratesoftware.wiki/wiki/Java) devs: **Jake** and [Thor](https://piratesoftware.wiki/wiki/Thor)
-- [PenguinTheFluffy](https://piratesoftware.wiki/wiki/PenguinTheFluffy) (previously Notker) for the awesome resource pack  
+- [PenguinTheFluffy](https://piratesoftware.wiki/wiki/PenguinTheFluffy) (and previously Notker) for the awesome resource pack  
   (which contains item IDs which made this project easier to start)
