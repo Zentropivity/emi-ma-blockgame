@@ -64,7 +64,7 @@ public class AbstractVendor {
   // same input, different outputs (listed)
   protected void sameInRecipes(String idBase, int fromIndex, int gold, List<EmiIngredient> input,
       List<EmiStack> outputs) {
-    for (int i = 0; i < outputs.size() - 1; ++i) {
+    for (int i = 0; i < outputs.size(); ++i) {
       final String recipeId = idBase + "/" + (fromIndex + i);
       recipe(recipeId, gold, input, outputs.get(i));
     }
@@ -72,7 +72,7 @@ public class AbstractVendor {
   // same input, different outputs (single)
   protected void sameInRecipes(String idBase, int fromIndex, int gold, EmiIngredient input,
       List<EmiStack> outputs) {
-    for (int i = 0; i < outputs.size() - 1; ++i) {
+    for (int i = 0; i < outputs.size(); ++i) {
       final String recipeId = idBase + "/" + (fromIndex + i);
       recipe(recipeId, gold, input, outputs.get(i));
     }
