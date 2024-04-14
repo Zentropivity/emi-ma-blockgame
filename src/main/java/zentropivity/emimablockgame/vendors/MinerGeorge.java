@@ -11,6 +11,7 @@ public class MinerGeorge extends AbstractVendor {
     super("minergeorge", BlockGameItems.BRASS_PICKAXE);
 
     sameOutRecipes("repair/normal/common", 0, 5, List.of(
+        EmiStack.of(Items.REDSTONE, 8),
         EmiStack.of(Items.ANDESITE, 64),
         EmiStack.of(Items.SMOOTH_BASALT, 64),
         EmiStack.of(Items.CALCITE, 64),
