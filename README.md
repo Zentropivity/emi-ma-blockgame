@@ -80,5 +80,5 @@ Pull requests are welcome. I am no _Java_ dev. (May rewrite it in Rust later... 
 
 - Nelas, the author of [BlockGame Wiki](https://blockgame.piratesoftware.wiki) for the assistance
 - [BlockGame](https://piratesoftware.wiki/wiki/Blockgame) [Java](https://piratesoftware.wiki/wiki/Java) devs: **Jake** and [Thor](https://piratesoftware.wiki/wiki/Thor)
-- [PenguinTheFluffy](https://piratesoftware.wiki/wiki/PenguinTheFluffy) (and previously Notker) for the awesome resource pack  
+- [PenguinTheFluffy](https://piratesoftware.wiki/wiki/PenguinTheFluffy) (and previously Notker) for the [Unofficial BlockGame resource pack](https://modrinth.com/resourcepack/unofficial-blockgame-texture-pack)  
   (which contains item IDs which made this project easier to start)
