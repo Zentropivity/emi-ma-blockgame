@@ -21,13 +21,13 @@ public class ChefSue extends AbstractVendor {
         BlockGameItems.GRAVY_GOLDEN), BlockGameItems.GOLDEN_POTATOES_AND_GOLDEN_GRAVY);
     recipe("potatoesandgravy/animated/golden", 5, List.of(
         BlockGameItems.GOLDEN_POTATO,
-        BlockGameItems.GRAVY_GOLDEN), BlockGameItems.GOLDEN_POTATOES_AND_GOLDEN_GROOVY);
+        BlockGameItems.GROOVY_GOLDEN), BlockGameItems.GOLDEN_POTATOES_AND_GOLDEN_GROOVY);
     recipe("potatoesandgravy/base/sentient", 5, List.of(
         BlockGameItems.SENTIENT_POTATO,
         BlockGameItems.GRAVY_SENTIENT), BlockGameItems.SENTIENT_POTATOES_AND_SENTIENT_GRAVY);
     recipe("potatoesandgravy/animated/sentient", 5, List.of(
         BlockGameItems.SENTIENT_POTATO,
-        BlockGameItems.GRAVY_SENTIENT), BlockGameItems.SENTIENT_POTATOES_AND_SENTIENT_GROOVY);
+        BlockGameItems.GROOVY_SENTIENT), BlockGameItems.SENTIENT_POTATOES_AND_SENTIENT_GROOVY);
 
     recipe("bread/wholewart", 5, List.of(
         BlockGameItems.WHOLE_WART,
