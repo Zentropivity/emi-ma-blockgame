@@ -2,6 +2,8 @@ package zentropivity.emimablockgame.vendors;
 
 import java.util.List;
 
+import dev.emi.emi.api.stack.EmiStack;
+import net.minecraft.item.Items;
 import zentropivity.emimablockgame.item.BlockGameItems;
 
 public class BotanistMint extends AbstractVendor {
@@ -21,6 +23,7 @@ public class BotanistMint extends AbstractVendor {
 
     recipe("xptome/herbalism", 50, BlockGameItems.EARTHEN_HEART, BlockGameItems.SECRETS_HERBALISM);
     recipe("fragile/hoe", 1000, List.of(
+        EmiStack.of(Items.GLASS, 64),
         BlockGameItems.SKYSTEEL_HOE,
         BlockGameItems.BOLT_SILK.copy().setAmount(9),
         BlockGameItems.PRISTINE_WOOD.copy().setAmount(2)),

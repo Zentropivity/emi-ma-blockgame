@@ -318,7 +318,7 @@ public class BlockGameItems {
       // FOCUS_FROSTSLIME = createItem(Items.SLIME_BLOCK, "FOCUS_FROSTSLIME", "Focus Frostslime"),
       // FOCUS_TRINITY = createItem(Items.MAGMA_CREAM, "FOCUS_TRINITY", "Focus Trinity"),
       FRAGILE_AXE = createItem(Items.DIAMOND_AXE, "FRAGILE_AXE", "Fragile Axe"),
-      FRAGILE_HOE = createItem(Items.DIAMOND_HOE, "FRAGILE_HOE", "Fragile Hoe"),
+      FRAGILE_HOE = createItem(Items.NETHERITE_HOE, "SCULK_HARVESTER", "Sculk Harvester"),
       FRAGILE_PICKAXE = createItem(Items.DIAMOND_PICKAXE, "FRAGILE_PICKAXE", "Fragile Pickaxe"),
       FRAGILE_SHOVEL = createItem(Items.DIAMOND_SHOVEL, "FRAGILE_SHOVEL", "Fragile Shovel"),
       // FROZEN_HIDE = createItem(Items.LEATHER, "FROZEN_HIDE", "Frozen Hide"),

@@ -38,11 +38,11 @@ public class MinerGeorge extends AbstractVendor {
         BlockGameItems.EARTHEN_HEART,
         BlockGameItems.SECRETS_MINING);
 
-    recipe("fragile/pickaxe", 1000,
-        List.of(
-            BlockGameItems.SKYSTEEL_PICKAXE,
-            BlockGameItems.BOLT_SILK.copy().setAmount(9),
-            BlockGameItems.PRISTINE_WOOD.copy().setAmount(2)),
+    recipe("fragile/pickaxe", 1000, List.of(
+        EmiStack.of(Items.GLASS, 64),
+        BlockGameItems.SKYSTEEL_PICKAXE,
+        BlockGameItems.BOLT_SILK.copy().setAmount(9),
+        BlockGameItems.PRISTINE_WOOD.copy().setAmount(2)),
         BlockGameItems.FRAGILE_PICKAXE);
   }
 }

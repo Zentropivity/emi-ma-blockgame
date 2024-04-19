@@ -32,6 +32,7 @@ public class ArchaeologistMortimer extends AbstractVendor {
 
     recipe("xptome/archaeology", 50, BlockGameItems.EARTHEN_HEART, BlockGameItems.SECRETS_ARCHAEOLOGY);
     recipe("fragile/shovel", 1000, List.of(
+        EmiStack.of(Items.GLASS, 64),
         BlockGameItems.SKYSTEEL_SHOVEL,
         BlockGameItems.BOLT_SILK.copy().setAmount(9),
         BlockGameItems.PRISTINE_WOOD.copy().setAmount(2)),

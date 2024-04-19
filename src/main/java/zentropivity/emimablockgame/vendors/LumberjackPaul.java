@@ -30,6 +30,7 @@ public class LumberjackPaul extends AbstractVendor {
 
     recipe("xptome/logging", 50, BlockGameItems.PRISTINE_CORE, BlockGameItems.SECRETS_LOGGING);
     recipe("fragile/axe", 1000, List.of(
+        EmiStack.of(Items.GLASS, 64),
         BlockGameItems.SKYSTEEL_AXE,
         BlockGameItems.BOLT_SILK.copy().setAmount(9),
         BlockGameItems.PRISTINE_WOOD.copy().setAmount(2)), BlockGameItems.FRAGILE_AXE);
