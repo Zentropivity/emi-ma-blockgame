@@ -17,16 +17,16 @@ public class ChefSue extends AbstractVendor {
         EmiStack.of(Items.POTATO, 3),
         BlockGameItems.GROOVY), BlockGameItems.POTATOES_AND_GROOVY);
     recipe("potatoesandgravy/base/golden", 5, List.of(
-        BlockGameItems.GOLDEN_POTATO,
+        BlockGameItems.GOLDEN_POTATO.copy().setAmount(3),
         BlockGameItems.GRAVY_GOLDEN), BlockGameItems.GOLDEN_POTATOES_AND_GOLDEN_GRAVY);
     recipe("potatoesandgravy/animated/golden", 5, List.of(
-        BlockGameItems.GOLDEN_POTATO,
+        BlockGameItems.GOLDEN_POTATO.copy().setAmount(3),
         BlockGameItems.GROOVY_GOLDEN), BlockGameItems.GOLDEN_POTATOES_AND_GOLDEN_GROOVY);
     recipe("potatoesandgravy/base/sentient", 5, List.of(
-        BlockGameItems.SENTIENT_POTATO,
+        BlockGameItems.SENTIENT_POTATO.copy().setAmount(3),
         BlockGameItems.GRAVY_SENTIENT), BlockGameItems.SENTIENT_POTATOES_AND_SENTIENT_GRAVY);
     recipe("potatoesandgravy/animated/sentient", 5, List.of(
-        BlockGameItems.SENTIENT_POTATO,
+        BlockGameItems.SENTIENT_POTATO.copy().setAmount(3),
         BlockGameItems.GROOVY_SENTIENT), BlockGameItems.SENTIENT_POTATOES_AND_SENTIENT_GROOVY);
 
     recipe("bread/wholewart", 5, List.of(
