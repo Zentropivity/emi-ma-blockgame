@@ -25,7 +25,6 @@ public class ThaumaturgeGregory extends AbstractVendor {
         BlockGameItems.THAUMATURGE_IMPLEMENT_3);
     recipe("thaumaturge/implement/4", 250, List.of(
         EmiStack.of(Items.SOUL_LANTERN),
-        BlockGameItems.WHIPPING_WINDS,
         BlockGameItems.POTION_HEALING_GLOWING.copy().setAmount(2),
         BlockGameItems.BACON_BITS.copy().setAmount(64),
         BlockGameItems.THAUMATURGE_IMPLEMENT_3),
