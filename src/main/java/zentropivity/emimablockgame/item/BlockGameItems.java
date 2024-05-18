@@ -914,7 +914,7 @@ public class BlockGameItems {
       SHIMMERGLASS_SHOVEL = createItem(Items.DIAMOND_SHOVEL, "SHIMMERGLASS_SHOVEL", "Shimmerglass Shovel"),
       SKYSTEEL_AXE = createItem(Items.IRON_AXE, "SKYSTEEL_AXE", "Skysteel Axe"),
       SKYSTEEL_FISHINGPOLE = createItem(Items.FISHING_ROD, "SKYSTEEL_FISHINGPOLE", "Skysteel Fishingpole"),
-      SKYSTEEL_HOE = createItem(Items.IRON_HOE, "SKYSTEEL_HOE", "Sculk Harvester"),
+      SKYSTEEL_HOE = createItem(Items.IRON_HOE, "SKYSTEEL_HOE", "Skysteel Hoe"),
       SKYSTEEL_PICKAXE = createItem(Items.IRON_PICKAXE, "SKYSTEEL_PICKAXE", "Skysteel Pickaxe"),
       SKYSTEEL_SHOVEL = createItem(Items.IRON_SHOVEL, "SKYSTEEL_SHOVEL", "Skysteel Shovel"),
       SMOKED_APPLE = createItem(Items.APPLE, "SMOKED_APPLE", "Smoked Apple"),
